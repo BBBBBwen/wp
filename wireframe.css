@@ -46,7 +46,7 @@ nav
 main
 {
   background-color: hsl(120,100%,97%);
-  border: 5px solid hsl(120,100%,97%);
+  border: 5px solid hsl(120,100%,40%);
 }
 footer
 {
