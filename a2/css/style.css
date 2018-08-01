@@ -1,1 +1,48 @@
-/* Insert your styles here */
+.L{
+    float: left;
+    width: 50px
+}
+.R{
+    float: right;
+}
+
+section{
+    text-align: center;
+}
+.bar{
+    width: 100%;
+    height: 50px;
+    background: deepskyblue;
+}
+.logo{
+    float: left;
+    position: initial;
+    width: 100px;
+    height: 50px;
+    background: deepskyblue;
+}
+
+.tab{
+    float: left;
+    position: relative;
+    left: 100px;
+    width: 400px;
+    height: 50px;
+    background: deepskyblue;
+}
+
+.tab2{
+    float: right;
+    position: relative;
+    right: 0px;
+    width: 150px;
+    height: 50px;
+    background: deepskyblue;
+}
+h1{
+    font: bold 15px arial,sans-serif;
+    text-align: left;
+}
+h2{
+    text-align: center;
+}
