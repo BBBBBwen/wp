@@ -14,8 +14,16 @@
       <div class='bar'>
       <header>
         <div class='logo'>
-          <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=50 width=50 class='L'/> 
-      <tt>CaptainRouge</tt>
+          <table>
+            <tr>
+            <th>
+          <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=25 width=25/> 
+</th>
+     <td>     
+       <h1>CaptainRouge</h1>
+    </td>
+    </tr>
+</table>
     </div>
       </header>
       <nav>
@@ -27,8 +35,8 @@
 </div>
 <div class='tab2'>
 <ul>
-  <a href="login.php"><input type='button' class='L'name='log in' value='log in'  /></a>
-  <a href="signup.php"><input type='button' name='sign up' value='sign up' /></a>
+  <a href="login.php"><input type='button' class='L'name='log in' value='Log in'  /></a>
+  <a href="signup.php"><input type='button' name='sign up' value='Sign up' /></a>
 </ul>
         </div>
       </nav>

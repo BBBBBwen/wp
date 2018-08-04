@@ -1,6 +1,6 @@
 .L{
     float: left;
-    width: 50px
+    width: 100px
 }
 .R{
     float: right;
@@ -11,14 +11,18 @@ section{
 }
 .bar{
     width: 100%;
-    height: 50px;
+    height: 25px;
+    padding: 0px;
+    border: 0px;
     background: deepskyblue;
 }
 .logo{
     float: left;
-    position: initial;
+    position: relative;
     width: 100px;
-    height: 50px;
+    height: 25px;
+    padding: 0px;
+    border: 0px;
     background: deepskyblue;
 }
 
@@ -27,7 +31,7 @@ section{
     position: relative;
     left: 100px;
     width: 400px;
-    height: 50px;
+    height: 25px;
     background: deepskyblue;
 }
 
@@ -35,12 +39,12 @@ section{
     float: right;
     position: relative;
     right: 0px;
-    width: 150px;
-    height: 50px;
+    width: 300px;
+    height: 25px;
     background: deepskyblue;
 }
 h1{
-    font: bold 15px arial,sans-serif;
+    font: bold 15px arial;
     text-align: left;
 }
 h2{
