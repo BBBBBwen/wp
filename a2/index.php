@@ -15,7 +15,7 @@
       <header>
         <div class='logo'>
           <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=50 width=50 class='L'/> 
-      <h1>CaptainRouge</h1>
+      <tt>CaptainRouge</tt>
     </div>
       </header>
       <nav>
@@ -36,8 +36,8 @@
       <main>
         <section>
         <h2>The best fish & chips you can find in Dandenong</h2>
+        <img src='../../A2media/FIsh&salad.jpg'  width='10%' height='5%' alt='FIsh&salad.jpg' />
                 <img src='../../A2media/shop.jpg'  width='24%' height='24%' alt='shop' />
-                <img src='../../A2media/FIsh&salad.jpg'  width='10%' height='5%' alt='FIsh&salad.jpg' />
                 <img src='../../A2media/chicken&schnitzel.jpg'  width='10%' height='5%'alt='chicken&schnitzel' />
 </section>
       </main>
