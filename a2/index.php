@@ -17,7 +17,7 @@
           <table>
             <tr>
             <th>
-          <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=25 width=25/> 
+          <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=30 width=30/> 
 </th>
      <td>     
        <h1>CaptainRouge</h1>
