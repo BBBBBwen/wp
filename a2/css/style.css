@@ -9,11 +9,17 @@
 section{
     text-align: center;
 }
+a{
+    text-decoration: none;
+}
 .bar{
+    position: sticky;
+    top: 0px;
     width: 100%;
     height: 25px;
-    padding: 0px;
-    border: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 0px;
     background: deepskyblue;
 }
 .logo{
@@ -21,26 +27,35 @@ section{
     position: relative;
     width: 100px;
     height: 25px;
-    padding: 0px;
-    border: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 0px;
     background: deepskyblue;
 }
 
 .tab{
     float: left;
     position: relative;
+    top: 0px;
     left: 100px;
     width: 400px;
     height: 25px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 0px;
     background: deepskyblue;
 }
 
 .tab2{
     float: right;
     position: relative;
+    top: 0px;
     right: 0px;
     width: 300px;
     height: 25px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 0px;
     background: deepskyblue;
 }
 h1{
@@ -52,18 +67,43 @@ h2{
 }
 form{
     position: relative;
-    left: 30%;
-    height: 10%;
-    text-align: center;
+    height: 40%;
 }
 .login{
     position: relative;
-    left: 30%;
-    height: 10%;
-    width: 30%;
-    text-align: center;
+    margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+    width: 40%;
+    height: 40%;
+}
+.signup{
+    position: relative;
+    margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+    width: 40%;
+    height:40%;
 }
 .signupr{
     position: relative
+    
     right;
+}
+.adjust{
+    width:20px;
+    height:20px;
+}
+.T{
+    width:20px;
+    height:20px;
+}
+.cart{
+    margin-top:25px;
+}
+.cartR{
+position: relative;
+right: 30px;
 }

@@ -26,16 +26,16 @@
       <nav>
         <div class='tab'>
           <ul>
-            <a href="index.php" target='_top'><input type='button' class='L' name='Home' value='Home' /></a>
-            <a href="products.php" target='_top'><input type='button'  name='Products' value='Products' /></a>
+            <a href="index.php" target='_top'class='L'>Home</a>
+            <a href="products.php" target='_top'>Products</a>
 </ul>
 </div>
       </nav>
 </div>
         <section class='login'>
-        <fieldset>
+        <fieldset class='fs'>
             <legend>Login your account</legend>
-        <form action='' method='post' enctype=''>
+        <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype=''>
         UserName: <input type='text' name='username' value='' placeholder='enter your user name' required /><br>
         Password:  <input type='password' name='password' value='' required /><br>
         <input type='submit' name='sign in' value='sign in' />
@@ -43,5 +43,12 @@
 </form>
 </fieldset>
 </section>
+<footer>
+        <div>&copy;<script>
+          document.write(new Date().getFullYear());
+        </script> Bowen Zhang, s3617571 and group name here.</div>
+        <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+        <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+      </footer>
 </body>
     </html>

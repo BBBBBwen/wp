@@ -29,14 +29,14 @@
       <nav>
         <div class='tab'>
           <ul>
-            <a href="index.php" target='_top'><input type='button' class='L' name='Home' value='Home' /></a>
-            <a href="products.php" target='_top'><input type='button'  name='Products' value='Products' /></a>
+            <a href="index.php" target='_top' class='L'>Home</a>
+            <a href="products.php" target='_top'>Products</a>
 </ul>
 </div>
 <div class='tab2'>
 <ul>
-  <a href="login.php"><input type='button' class='L'name='log in' value='Log in'  /></a>
-  <a href="signup.php"><input type='button' name='sign up' value='Sign up' /></a>
+  <a href="login.php"class='L'>Login</a>
+  <a href="signup.php">SignUp</a>
 </ul>
         </div>
       </nav>
@@ -44,9 +44,9 @@
       <main>
         <section>
         <h2>The best fish & chips you can find in Dandenong</h2>
-        <img src='../../A2media/FIsh&salad.jpg'  width='10%' height='5%' alt='FIsh&salad.jpg' />
-                <img src='../../A2media/shop.jpg'  width='24%' height='24%' alt='shop' />
-                <img src='../../A2media/chicken&schnitzel.jpg'  width='10%' height='5%'alt='chicken&schnitzel' />
+        <img src='../../A2media/FIsh&salad.jpg'  width='20%' height='10%' alt='FIsh&salad.jpg' />
+                <img src='../../A2media/shop.jpg'  width='48%' height='48%' alt='shop' />
+                <img src='../../A2media/chicken&schnitzel.jpg'  width='20%' height='10%'alt='chicken&schnitzel' />
 </section>
       </main>
       <footer>
