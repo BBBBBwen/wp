@@ -1,3 +1,6 @@
+*{
+    margin: 0;
+}
 .L{
     float: left;
     width: 100px
@@ -5,66 +8,65 @@
 .R{
     float: right;
 }
-
+.topbar{
+    height: 30px;
+}
 section{
     text-align: center;
+    color: deepskyblue;
 }
 a{
     text-decoration: none;
 }
+a:hover {
+    color: rgb(140, 0, 255);
+  }
 .bar{
     position: sticky;
-    align-items: center;
     top: 0px;
     width: 100%;
     height: 30px;
-    margin-top: 0em;
-    padding-top: 0em;
-    border-top: 0em;
     background: deepskyblue;
 }
 .logo{
     float: left;
     position: relative;
-    align-items: center;
+}
+.logoword{
+    float: left;
     width: 100px;
-    height: 30px;
-    margin-top: 0px;
-    padding-top: 0px;
-    border-top: 0px;
-    background: deepskyblue;
+    text-align: center;
+    align-items: center;
 }
 
 .tab{
     float: left;
     position: relative;
     align-items: center;
-    top: 0px;
     left: 100px;
     width: 400px;
     height: 30px;
-    margin-top: 0px;
-    padding-top: 0px;
-    border-top: 0px;
-    background: deepskyblue;
 }
 
 .tab2{
     float: right;
     position: relative;
     align-items: center;
-    top: 0px;
     right: 0px;
     width: 300px;
     height: 30px;
-    margin-top: 0px;
-    padding-top: 0px;
-    border-top: 0px;
-    background: deepskyblue;
 }
+
+.link{
+    padding: 20px;
+    color: aliceblue;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
 h1{
-    font: bold 15px arial;
-    text-align: left;
+    font: bold 20px arial;
 }
 h2{
     text-align: center;

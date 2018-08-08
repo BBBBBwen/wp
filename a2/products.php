@@ -8,33 +8,20 @@
       <script src='../wireframe.js'></script>
     </head>
     <body>
-<div class='bar'>
-      <header>
+      <div class='bar'>
         <div class='logo'>
-          <table>
-            <tr>
-            <th>
-          <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=25 width=25/> 
-</th>
-     <td>     
+          <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=30 width=30/>  
+</div><div class='logoword'> 
        <h1>CaptainRouge</h1>
-    </td>
-    </tr>
-</table>
     </div>
-      </header>
-      <nav>
+      <nav class='topbar'>
         <div class='tab'>
-          <ul>
-            <a href="index.php" target='_top' class='L'>Home</a>
-            <a href="products.php" target='_top'>Products</a>
-</ul>
+            <a href="index.php" target='_top' class='link'>Home</a>
+            <a href="products.php" target='_top' class='link'>Products</a>
 </div>
 <div class='tab2'>
-<ul>
-  <a href="login.php"class='L'>Login</a>
-  <a href="signup.php">SignUp</a>
-</ul>
+  <a href="login.php" class='link'>Login</a>
+  <a href="signup.php" class='link'>SignUp</a>
         </div>
       </nav>
 </div>
