@@ -8,6 +8,7 @@
       <script src='../wireframe.js'></script>
     </head>
     <body>
+        <script src="js/number.js"></script>
       <div class='bar'>
         <div class='logo'>
           <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=30 width=30/>  
@@ -42,10 +43,10 @@
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="Large">Large</option>
-            </select>
-        <button calss='adjust' type='button'>-</button>
-        <input type='text' class='T' name='qty' value='' />
-        <button calss='adjust' type='button'>+</button>
+            </select><br>
+        <button calss='minu' type='button' onclick="Cminu()" >-</button>
+        <input type='text' id='Cprice' class='price'  name='price' value="0"/>
+        <button calss='add' type='button' onclick="Cadd()" >+</button>
 </form>
 </td>
 </tr>
@@ -62,10 +63,10 @@
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="Large">Large</option>
-    </select>
-        <button calss='adjust' type='button'>-</button>
-        <input type='text' class='T' name='qty' value='' />
-        <button calss='adjust' type='button'>+</button>
+    </select><br>
+    <button calss='minu' type='button' onclick="FBminu()" >-</button>
+        <input type='text' id='FBprice' class='price'  name='price' value="0"/>
+        <button calss='add' type='button' onclick="FBadd()" >+</button>
 </form>
 </td>
 </tr>
@@ -82,10 +83,10 @@
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="Large">Large</option>
-            </select>
-        <button calss='adjust' type='button'>-</button>
-        <input type='text' class='T' name='qty' value='' />
-        <button calss='adjust' type='button'>+</button>
+            </select><br>
+            <button calss='minu' type='button' onclick="FCminu()" >-</button>
+        <input type='text' id='FCprice' class='price'  name='price' value="0"/>
+        <button calss='add' type='button' onclick="FCadd()" >+</button>
 </form>
 </td>
 </tr>
