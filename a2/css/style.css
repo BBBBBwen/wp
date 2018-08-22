@@ -3,7 +3,7 @@
 }
 .L{
     float: left;
-    width: 100px
+    width: 100px;
 }
 .R{
     float: right;
@@ -14,6 +14,7 @@
 section{
     text-align: center;
     color: deepskyblue;
+    float: left;
 }
 a{
     text-decoration: none;
@@ -84,6 +85,9 @@ form{
   width: 300px;
   height:200px;
 }
+.foodsec{
+    float: left;
+}
 .signup{
     position: relative;
     margin-left: auto;
@@ -94,18 +98,19 @@ form{
     height:200px;
 }
 .signupr{
-    position: relative
-    
-    right;
+    position: relative;
 }
-.add .minu .price{
+.add .minu .qty{
     width:20px;
     height:20px;
 }
+.prodpic{
+    float: left;
+    align-content: left;
+    position: relative; 
+}
 .cart{
     margin-top:25px;
-}
-.cartR{
 position: relative;
 right: 30px;
 }

@@ -8,7 +8,6 @@
       <script src='../wireframe.js'></script>
     </head>
     <body>
-        <script src="js/number.js"></script>
       <div class='bar'>
         <div class='logo'>
           <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=30 width=30/>  
@@ -26,76 +25,17 @@
         </div>
       </nav>
 </div>
-<section class='cart'>
-    <fieldset>
-    <table>
-
-        <tr>
-            <th>
-                <img src = '../../A2media/Chips.jpg' alt='Chips' height=200 width=200/>
-</th>
-<td>
-    <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype=''>
-        <h3>Chips</h3><br>
-        <imput type='hidden' name='id' value='cr001' />
-        <select name ='size'>
-            <option value='' selected>Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="Large">Large</option>
-            </select><br>
-        <button calss='minu' type='button' onclick="Cminu()" >-</button>
-        <input type='text' id='Cprice' class='price'  name='price' value="0"/>
-        <button calss='add' type='button' onclick="Cadd()" >+</button>
-</form>
-</td>
-</tr>
-<tr>
-            <th>
+<section class='foodsec'>
+                <a href="product.php" target='_top'><img src = '../../A2media/Chips.jpg' alt='Chips' height=200 width=200/></a>
+       <h3>Chips</h3><br>
+</section>
+       <section class='foodsec'>
                 <img src = '../../A2media/FishBurger.jpg' alt='Chips' height=200 width=200/>
-</th>
-<td>
-    <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype=''>
-        <h3>FishBurger</h3><br>
-        <imput type='hidden' name='id' value='cr002' />
-        <select name ='size'>
-            <option value='' selected>Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="Large">Large</option>
-    </select><br>
-    <button calss='minu' type='button' onclick="FBminu()" >-</button>
-        <input type='text' id='FBprice' class='price'  name='price' value="0"/>
-        <button calss='add' type='button' onclick="FBadd()" >+</button>
-</form>
-</td>
-</tr>
-<tr>
-            <th>
+      <h3>FishBurger</h3><br>
+</section>
+<section class='foodsec'>
                 <img src = '../../A2media/Fish&Chips.jpg' alt='Chips' height=200 width=200/>
-</th>
-<td>
-    <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype=''>
-        <h3>Fish&Chips</h3><br>
-        <imput type='hidden' name='id' value='cr003' />
-        <select name ='size'>
-            <option value='' selected>Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="Large">Large</option>
-            </select><br>
-            <button calss='minu' type='button' onclick="FCminu()" >-</button>
-        <input type='text' id='FCprice' class='price'  name='price' value="0"/>
-        <button calss='add' type='button' onclick="FCadd()" >+</button>
-</form>
-</td>
-</tr>
-</table>
-<div class='cartR'>
-    <input type='submit' name='submit cart' value='add to cart'/>
-    <input type='reset' name='reset' value='reset'/>
-    </div>
-    </fieldset>
+           <h3>Fish&Chips</h3><br/>
 </section>
 <footer>
         <div>&copy;<script>

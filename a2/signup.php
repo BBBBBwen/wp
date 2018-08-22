@@ -17,7 +17,7 @@
       <nav class='topbar'>
         <div class='tab'>
             <a href="index.php" target='_top' class='link'>Home</a>
-            <a href="products.php" target='_top' class='link'>Products</a>
+            <a href="product.php" target='_top' class='link'>Products</a>
 </div>
 
       </nav>
