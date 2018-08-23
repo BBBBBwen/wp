@@ -11,3 +11,6 @@ var qty = document.getElementById(id);
     qty.value=parseInt(qty.value) - 1;
     }
 }
+function display(){
+   login = display;
+}

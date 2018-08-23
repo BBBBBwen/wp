@@ -8,6 +8,7 @@
       <script src='../wireframe.js'></script>
     </head>
     <body>
+    
       <div class='bar'>
         <div class='logo'>
           <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=30 width=30/>  

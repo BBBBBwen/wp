@@ -8,9 +8,11 @@
       <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
       <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
       <script src='../wireframe.js'></script>
+      <script src="js/number.js"></script>  
     </head>
 
     <body>
+    
       <div class='bar'>
         <div class='logo'>
           <img src = '../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=30 width=30/>  
@@ -23,10 +25,21 @@
             <a href="products.php" target='_top' class='link'>Products</a>
 </div>
 <div class='tab2'>
-  <a href="login.php" class='link'>Login</a>
+  <a href="" name='siin' class='link' onclick="display()" > Login</a>
   <a href="signup.php" class='link'>SignUp</a>
         </div>
       </nav>
+</div>
+<div class='login' name='login' hidden>
+        <fieldset class='fs'>
+            <legend>Login your account</legend>
+        <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype=''>
+        UserName: <input type='text' name='username' value='' placeholder='enter your user name' required /><br>
+        Password:  <input type='password' name='password' value='' required /><br>
+        <input type='submit' name='sign in' value='sign in' />
+        <a href="signup.php"><input class='signupr' type='button' name='sign up' value='sign up' /></a>
+</form>
+</fieldset>
 </div>
       <main>
         <section>
