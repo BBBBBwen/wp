@@ -1,114 +1,297 @@
-*{
+* {
     margin: 0;
+    box-sizing: border-box;
 }
-.L{
-    float: left;
-    width: 100px;
+
+.bgdc {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-.R{
+
+.main1 {
+    background: snow;
+    width: 20%;
+    margin: 12% auto;
+    overflow: auto;
+}
+
+.close {
+    font: bold 25px arial;
+    text-align: left;
+    padding: 10px;
+    background: blueviolet;
+}
+
+.close-button {
     float: right;
+    font-size: 20px;
+    cursor: pointer;
+    padding-top: 0;
+    padding-right: 15px;
 }
-.topbar{
+
+.main2 {
+    background: snow;
+    margin: auto;
+    height: auto;
+    padding: 20px;
+}
+
+.topbar {
     height: 30px;
 }
-section{
+
+section {
     text-align: center;
     color: deepskyblue;
     float: left;
 }
-a{
+
+a {
+    color: rgb(1, 8, 10);
     text-decoration: none;
 }
+
+.alignt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    font: italic 15px arial;
+    align-items: flex-start;
+}
+
+.gen {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
 a:hover {
     color: rgb(140, 0, 255);
-  }
-.bar{
+}
+
+.dateofbirth {
+    display: flex;
+}
+
+.month {
+    width: 40%;
+}
+
+.day {
+    width: 90%;
+}
+
+.year {
+    width: 90%;
+}
+
+.bar {
     position: sticky;
     top: 0px;
     width: 100%;
-    height: 30px;
-    background: deepskyblue;
+    height: 50px;
+    background: rgb(2, 120, 160);
 }
-.logo{
+
+.logo {
     float: left;
     position: relative;
 }
-.logoword{
+
+.logoword {
     float: left;
     width: 100px;
     text-align: center;
     align-items: center;
+    color: aliceblue;
 }
 
-.tab{
+.tab {
     float: left;
     position: relative;
     align-items: center;
     left: 100px;
     width: 400px;
-    height: 30px;
+    height: 80px;
 }
 
-.tab2{
+.tab2 {
     float: right;
     position: relative;
     align-items: center;
     right: 0px;
     width: 300px;
-    height: 30px;
+    height: 80px;
 }
 
-.link{
-    padding: 20px;
-    color: aliceblue;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-}
-
-h1{
+.link {
+    padding-left: 10;
+    padding-right: 10;
     font: bold 20px arial;
-}
-h2{
+    height: 50px;
+    width: 100px;
+    background-color: deepskyblue;
+    border: none;
     text-align: center;
 }
-form{
+
+.btn {
+    margin-top: 10px;
+    font: bold 15px arial;
+    height: 25px;
+    width: 100%;
+    background-color: deepskyblue;
+    border: none;
+    text-align: center;
+}
+
+.btn1 {
+    font: bold 15px arial;
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 25px;
+    width: 100px;
+    background-color: deepskyblue;
+    border: none;
+    text-align: center;
+}
+
+h1 {
+    font: bold 25px arial;
+    text-align: center;
+    padding-top: 5px;
+}
+
+h2 {
+    font: bold 50px arial black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    font: bold 30px arial;
+}
+
+form {
     position: relative;
     height: 40%;
 }
-.login{
-    
-    position: relative;
-    -moz-box-align: center;
-  width: 300px;
-  height:200px;
-}
-.foodsec{
-    float: left;
-}
-.signup{
+
+.signup {
     position: relative;
     margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
     width: 300px;
-    height:200px;
+    height: 200px;
 }
-.signupr{
-    position: relative;
+
+.qty {
+    text-align: center;
+    border: 2px blueviolet;
+    background-color: snow;
+    width: 30px;
+    height: 30px;
 }
-.add .minu .qty{
-    width:20px;
-    height:20px;
+
+.fullpro {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
-.prodpic{
+
+.pros {
+    display: inline;
+    margin: 20px;
+}
+
+.product {
+    flex-direction: row;
+    display: flex;
+}
+
+.cart {
+    margin-top: 25px;
+    padding: 0;
+    height: 200px;
+    width: 100%;
+}
+
+.addcart {
+    position: fixed;
+    right: 0;
+    top: 50px;
+    background-color: beige;
+    width: 200px;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+.full {
+    display: flex;
+    margin-left: 400px;
+    width: 100%;
+    height: 100%;
+}
+
+.propic {
     float: left;
-    align-content: left;
-    position: relative; 
 }
-.cart{
-    margin-top:25px;
-position: relative;
-right: 30px;
+
+.text {
+    font: 20px arial;
+    width: 400px;
+    height: 400px;
+    border: 1px;
+    word-wrap: break-word
+}
+
+.desc {
+    font: bold 15px arial;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.title {
+    text-align: center;
+}
+
+.shop {
+    margin-left: 100px;
+}
+
+.topic {
+    height: 100%;
+    width: 40%;
+    margin-left: 0px;
+}
+.sec{
+    margin: 0;
+    width: 100%;
+}
+.picture {
+    width: 500px;
+    height: 500px;
+}
+footer{
+    width: 100%;
+    text-align: center;
 }
