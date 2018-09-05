@@ -43,12 +43,12 @@
             <span id="close1" class='close-button'>×</span>
           </div>
           <div class="main2">
-            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype=''>
+            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=signin' method='post' enctype=''>
               <div class='alignt'>
-                <label>UserName</label>
+                <label>EmailAddress</label>
               </div>
               <div class='alignt'>
-                <input type='text' name='username' value='' class='input' placeholder='enter your user name' required />
+                <input type='email' name='email' value='' class='input' placeholder='enter your user email address' required />
               </div>
               <div>
                 <label>Password</label>
@@ -57,7 +57,7 @@
                 <input type='password' name='password' class='input' value='' required />
               </div>
               <div class='alignt'>
-                <button type='submit' name='signup' class='btn'>SignUp</button>
+                <button type='submit' name='signin' class='btn'>Sign in</button>
               </div>
             </form>
           </div>
@@ -70,7 +70,7 @@
             <span id="close2" class='close-button'>×</span>
           </div>
           <div class="main2">
-            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype=''>
+            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=signup' method='post' enctype=''>
               <div>
                 <label>EmailAddress</label>
               </div>
@@ -117,7 +117,7 @@
         <h3>Chips</h3>
         <p class='desc'>Price small : $3.5 medium : $4.5 large : $5.5</p>
       </div>
-      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype=''>
+      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''>
         <div class='shop'>
           <input type='hidden' name='id' value='cr001' />
           <div>

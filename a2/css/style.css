@@ -15,7 +15,8 @@
 
 .main1 {
     background: snow;
-    width: 20%;
+    width: 300px;
+    height: fit-content;
     margin: 12% auto;
     overflow: auto;
 }
@@ -42,9 +43,7 @@
     padding: 20px;
 }
 
-.topbar {
-    height: 30px;
-}
+
 
 section {
     text-align: center;
@@ -88,18 +87,6 @@ a:hover {
     display: flex;
 }
 
-.month {
-    width: 40%;
-}
-
-.day {
-    width: 90%;
-}
-
-.year {
-    width: 90%;
-}
-
 .bar {
     position: sticky;
     top: 0px;
@@ -115,6 +102,8 @@ a:hover {
 
 .logoword {
     float: left;
+    margin-top: 5px;
+    margin-left: 10px;
     width: 100px;
     text-align: center;
     align-items: center;
@@ -125,7 +114,7 @@ a:hover {
     float: left;
     position: relative;
     align-items: center;
-    left: 100px;
+    left: 80px;
     width: 400px;
     height: 80px;
 }
@@ -140,8 +129,7 @@ a:hover {
 }
 
 .link {
-    padding-left: 10;
-    padding-right: 10;
+    
     font: bold 20px arial;
     height: 50px;
     width: 100px;
