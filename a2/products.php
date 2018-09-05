@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
   <div class='bar'>
     <div class='logo'>
       <img src='../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=50 width=50/>
@@ -108,6 +107,7 @@
           </div>
         </div>
       </div>
+  <noscript>javascript disabled</noscript>
   <div class='fullpro'>
   <span class='pros'>
     <a href="product.php" target='_top'>
@@ -137,5 +137,4 @@
   </footer>
   <script src="js/number.js"></script>
 </body>
-
 </html>

@@ -107,6 +107,7 @@
           </div>
         </div>
       </div>
+  <noscript>javascript disabled</noscript>
   <span class='full'>
     <div class='propic'>
       <img src='../../A2media/Chips.jpg' alt='Chips' height=400px width=400px/>
@@ -155,5 +156,4 @@
   </footer>
   <script src="js/number.js"></script>
 </body>
-
 </html>
