@@ -116,11 +116,15 @@
     <h3>Chips</h3>
         </span>
   <span class='pros'>
-    <img src='../../A2media/FishBurger.jpg' alt='Chips' height=200 width=200/>
+    <a href="burger.php" target='_top'>
+      <img src='../../A2media/FishBurger.jpg' alt='Chips' height=200 width=200/>
+    </a>
     <h3>FishBurger</h3>
         </span>
   <span class='pros'>
-    <img src='../../A2media/Fish&Chips.jpg' alt='Chips' height=200 width=200/>
+    <a href="fishnchips.php" target='_top'>
+      <img src='../../A2media/Fish&Chips.jpg' alt='Chips' height=200 width=200/>
+    </a>
     <h3>Fish&Chips</h3>
         </span>
   </div>
