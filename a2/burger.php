@@ -110,12 +110,12 @@
   <noscript>javascript disabled</noscript>
   <span class='full'>
     <div class='propic'>
-      <img src='../../A2media/Chips.jpg' alt='Chips' height=400px width=400px/>
+      <img src='../../A2media/FishBurger.jpg' alt='FishBurger' height=400px width=400px/>
       <p class='text'>Description here</p>
     </div>
     <div class='cart'>
       <div class='topic'>
-        <h3>Chips</h3>
+        <h3>FishBurger</h3>
         <p class='desc'>Price small : $3.5 medium : $4.5 large : $5.5</p>
       </div>
       <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''>
@@ -130,9 +130,9 @@
             </select>
           </div>
           <div>
-            <button class='qty' type='button' onclick="minu('Chipsqty')">-</button>
-            <input type='text' id='Chipsqty' class='qty' name='qty' value="0" />
-            <button class='qty' type='button' onclick="add('Chipsqty')">+</button>
+            <button class='qty' type='button' onclick="minu('FishBurgerqty')">-</button>
+            <input type='text' id='FishBurgerqty' class='qty' name='qty' value="0" />
+            <button class='qty' type='button' onclick="add('FishBurgerqty')">+</button>
           </div>
         </div>
         <div class='addcart'>
