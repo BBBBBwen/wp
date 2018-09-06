@@ -122,11 +122,11 @@
         <div class='shop'>
           <input type='hidden' name='id' value='cr001' />
           <div>
-            <select name='size'>
-              <option value='' selected>Size</option>
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="Large">Large</option>
+            <select name='sauce'>
+              <option value='' selected>Sauce</option>
+              <option value="small">BBQ</option>
+              <option value="medium">Chilli</option>
+              <option value="Large">Ketchup</option>
             </select>
           </div>
           <div>
