@@ -116,7 +116,7 @@
     <div class='cart'>
       <div class='topic'>
         <h3>FishBurger</h3>
-        <p class='desc'>Price small : $3.5 medium : $4.5 large : $5.5</p>
+        <p class='desc'>Price: $9.5</p>
       </div>
       <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''>
         <div class='shop'>
