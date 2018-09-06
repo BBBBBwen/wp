@@ -132,7 +132,7 @@
     <div>&copy;
       <script>
         document.write(new Date().getFullYear());
-      </script> Bowen Zhang, s3617571 and group name here.</div>
+      </script>Bowen Zhang s3617571, Cheng Chen s3728207 A2-s3617571-s3728207.</div>
     <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming
       course at RMIT University in Melbourne, Australia.</div>
     <div>
