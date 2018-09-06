@@ -111,7 +111,7 @@
   <span class='full'>
     <div class='propic'>
       <img src='../../A2media/Fish&Chips.jpg' alt='Fish&Chips' height=400px width=400px/>
-      <p class='text'>Description here</p>
+      <p class='text'>Thin cut deep fried chips with classic fried fish. Choose your flavour! (Sea salt and pepper by default)</p>
     </div>
     <div class='cart'>
       <div class='topic'>

@@ -111,7 +111,7 @@
   <span class='full'>
     <div class='propic'>
       <img src='../../A2media/Chips.jpg' alt='Chips' height=400px width=400px/>
-      <p class='text'>Description here</p>
+      <p class='text'>Classic thick cut fries with sea salt made from Australian grown potatoes. Ketchup included with every order. Great companion with burgers.</p>
     </div>
     <div class='cart'>
       <div class='topic'>

@@ -111,7 +111,7 @@
   <span class='full'>
     <div class='propic'>
       <img src='../../A2media/FishBurger.jpg' alt='FishBurger' height=400px width=400px/>
-      <p class='text'>Description here</p>
+      <p class='text'>Deep fried fish with fresh lettuce. Gluten free grilled bun. Choose the sauce of your own!</p>
     </div>
     <div class='cart'>
       <div class='topic'>
