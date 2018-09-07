@@ -118,15 +118,15 @@
         <h3>FishBurger</h3>
         <p class='desc'>Price: $9.5</p>
       </div>
-      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''>
+      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype='' onsubmit="return check1()">
         <div class='shop'>
           <input type='hidden' name='id' value='cr003' />
           <div>
             <select id='select' name='sauce'>
               <option value='' selected>Sauce</option>
-              <option value="small">BBQ</option>
-              <option value="medium">Chilli</option>
-              <option value="Large">Ketchup</option>
+              <option value="BBQ">BBQ</option>
+              <option value="Chilli">Chilli</option>
+              <option value="Ketchup">Ketchup</option>
             </select>
           </div>
           <div>

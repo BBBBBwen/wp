@@ -118,15 +118,15 @@
         <h3>Fish&Chips</h3>
         <p class='desc'>Price: $8.5</p>
       </div>
-      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''>
+      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype='' onsubmit="return check2()">
         <div class='shop'>
           <input type='hidden' name='id' value='cr002' />
           <div>
             <select id='select' name='Flavour'>
               <option value='' selected>Flavour</option>
-              <option value="small">Salt & Pepper</option>
-              <option value="medium">Chilli</option>
-              <option value="Large">Peri Peri</option>
+              <option value="Salt & Pepper">Salt & Pepper</option>
+              <option value="Chilli">Chilli</option>
+              <option value="Peri Peri">Peri Peri</option>
             </select>
           </div>
           <div>

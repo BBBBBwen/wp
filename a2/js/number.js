@@ -39,3 +39,34 @@ window.onclick = function close(e) {
         bgd2.style.display = "none";
     }
 }
+var qty = document.getElementById('Chipsqty');
+
+function check() {
+    if (qty.value == 0) {
+        qty.focus();
+        qty.select();
+        return false;
+    }
+    return true;
+}
+var cqty = document.getElementById('FishBurgerqty');
+function check1() {
+    if (cqty.value == 0) {
+        cqty.focus();
+        cqty.select();
+        return false;
+    }
+    smt.style.color = 'black';
+    return true;
+}
+
+var fcqty = document.getElementById('Chipsqty');
+function check2() {
+    if (fcqty.value == 0) {
+        fcqty.focus();
+        fcqty.select();
+        return false;
+    }
+    smt.style.color = 'black';
+    return true;
+}

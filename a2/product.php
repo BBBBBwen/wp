@@ -118,7 +118,7 @@
         <h3>Chips</h3>
         <p class='desc'>Price<br />Small : $3.5<br />Medium : $4.5<br />Large : $5.5</p>
       </div>
-      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''>
+      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype='' onsubmit="return check()">
         <div class='shop'>
           <input type='hidden' name='id' value='cr001' />
           <div>
