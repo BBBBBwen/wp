@@ -120,7 +120,7 @@
       </div>
       <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''>
         <div class='shop'>
-          <input type='hidden' name='id' value='cr001' />
+          <input type='hidden' name='id' value='cr002' />
           <div>
             <select name='Flavour'>
               <option value='' selected>Flavour</option>
