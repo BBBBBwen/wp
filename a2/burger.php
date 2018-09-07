@@ -118,7 +118,7 @@
         <h3>FishBurger</h3>
         <p class='desc'>Price: $9.5</p>
       </div>
-      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype='' onsubmit="return check1()">
+      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype='' onsubmit="return check()">
         <div class='shop'>
           <input type='hidden' name='id' value='cr003' />
           <div>

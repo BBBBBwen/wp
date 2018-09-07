@@ -1,6 +1,7 @@
 function add(id) {
     var qty = document.getElementById(id);
     qty.value = parseInt(qty.value) + 1;
+    qty.focus();
 }
 
 function minu(id) {
@@ -10,6 +11,7 @@ function minu(id) {
     } else {
         qty.value = parseInt(qty.value) - 1;
     }
+    qty.focus();
 }
 var sibtn = document.getElementById('sibtn');
 var subtn = document.getElementById('subtn');
@@ -39,34 +41,32 @@ window.onclick = function close(e) {
         bgd2.style.display = "none";
     }
 }
-var qty = document.getElementById('Chipsqty');
+var qty = document.getElementsByName('qty');
+var smt = document.getElementsByClassName('btn1');
+for (i = 0; i < smt.length; i++) {
+    smt[i].disabled = true;
+}
+    qty[0].onfocus = function () {
+        if (qty[0].value != 0) {
+            for (i = 0; i < smt.length; i++) {
+                smt[i].style.color = "deepskyblue";
+                smt[i].disabled = false;
+            }
+        } else {
+            for (i = 0; i < smt.length; i++) {
+                smt[i].style.color = "grey";
+                smt[i].disabled = true;
+            }
+        }
+    }
 
-function check() {
-    if (qty.value == 0) {
-        qty.focus();
-        qty.select();
-        return false;
-    }
-    return true;
-}
-var cqty = document.getElementById('FishBurgerqty');
-function check1() {
-    if (cqty.value == 0) {
-        cqty.focus();
-        cqty.select();
-        return false;
-    }
-    smt.style.color = 'black';
-    return true;
-}
-
-var fcqty = document.getElementById('Chipsqty');
-function check2() {
-    if (fcqty.value == 0) {
-        fcqty.focus();
-        fcqty.select();
-        return false;
-    }
-    smt.style.color = 'black';
-    return true;
-}
+    function check() {
+    
+        var qty = document.getElementsByName('qty');
+            if (qty[0].value == 0) {
+                qty[0].focus();
+                qty[0].select();
+                return false;
+            }
+            return true;
+        }

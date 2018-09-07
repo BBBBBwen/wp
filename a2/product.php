@@ -129,16 +129,16 @@
               <option value="Large">Large</option>
             </select>
           </div>
-          <div>
-            <button class='qty' type='button' onclick="minu('Chipsqty')">-</button>
+          <div id='qtydiv'>
+            <button class='qty' type='button' onclick="minu('Chipsqty')" name='btn'>-</button>
             <input type='text' id='Chipsqty' class='qty' name='qty' value="0" />
-            <button class='qty' type='button' onclick="add('Chipsqty')">+</button>
+            <button class='qty' type='button' onclick="add('Chipsqty')" name='btn'>+</button>
           </div>
         </div>
         <div class='addcart'>
           <h1>Click here to add to your cart</h1>
-          <input type='submit' id='submit1' class='btn1' name='submit cart' value='Buy now' />
-          <input type='submit' id='submit2' class='btn1' name='submit cart' value='add to cart' />
+          <input type='submit' id='submit1' class='btn1' name='submit cart' value='Buy now'/>
+          <input type='submit' id='submit2' class='btn1' name='submit cart' value='add to cart'/>
         </div>
       </form>
     </div>
