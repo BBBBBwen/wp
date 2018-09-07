@@ -122,7 +122,7 @@
         <div class='shop'>
           <input type='hidden' name='id' value='cr002' />
           <div>
-            <select id='select' name='Flavour'>
+            <select id='select' name='Flavour' required>
               <option value='' selected>Flavour</option>
               <option value="Salt & Pepper">Salt & Pepper</option>
               <option value="Chilli">Chilli</option>
