@@ -122,7 +122,7 @@
         <div class='shop'>
           <input type='hidden' name='id' value='cr002' />
           <div>
-            <select name='Flavour'>
+            <select id='select' name='Flavour'>
               <option value='' selected>Flavour</option>
               <option value="small">Salt & Pepper</option>
               <option value="medium">Chilli</option>
@@ -137,8 +137,8 @@
         </div>
         <div class='addcart'>
           <h1>Click here to add to your cart</h1>
-          <input type='submit' class='btn1' name='submit cart' value='Buy now' />
-          <input type='submit' class='btn1' name='submit cart' value='add to cart' />
+          <input type='submit' id='submit1' class='btn1' name='submit cart' value='Buy now' />
+          <input type='submit' id='submit2' class='btn1' name='submit cart' value='add to cart' />
         </div>
       </form>
     </div>
