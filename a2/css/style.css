@@ -157,6 +157,7 @@ a:hover {
     background-color: deepskyblue;
     border: none;
     text-align: center;
+    border-radius: 10px;
 }
 
 h1 {
