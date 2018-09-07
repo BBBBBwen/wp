@@ -129,7 +129,7 @@
               <option value="Large">Peri Peri</option>
             </select>
           </div>
-          <div>Chips
+          <div>
             <button class='qty' type='button' onclick="minu('Fish&Chipsqty')">-</button>
             <input type='text' id='Fish&Chipsqty' class='qty' name='qty' value="0" />
             <button class='qty' type='button' onclick="add('Fish&Chipsqty')">+</button>
