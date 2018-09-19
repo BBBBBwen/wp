@@ -1,9 +1,7 @@
 <?php
-  session_start();
-  include_once 'tools.php'; // now contains module and other helpful functions
-  top('Business'); // Now a function call 
+  require_once ('tools.php'); // now contains module and other helpful functions
+  top_module("Assaginmnet3"); // Now a function call 
 ?>
-
 
 <body class='backGround'>
   <header class='titleContainer'>
