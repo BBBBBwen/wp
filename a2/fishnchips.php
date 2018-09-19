@@ -43,7 +43,7 @@
             <span id="close1" class='close-button'>×</span>
           </div>
           <div class="main2">
-            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=signin' method='post' enctype=''>
+            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=login' method='post' enctype=''>
               <div class='alignt'>
                 <label>EmailAddress</label>
               </div>
@@ -108,6 +108,7 @@
         </div>
       </div>
   <noscript>javascript disabled</noscript>
+  <main>
   <span class='full'>
     <div class='propic'>
       <img src='../../A2media/Fish&Chips.jpg' alt='Fish&Chips' height=400px width=400px/>
@@ -143,6 +144,7 @@
       </form>
     </div>
   </span>
+  </main>
   <footer>
     <div>&copy;
       <script>

@@ -8,7 +8,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/a2\\js\\number.js"
+            "program": "${workspaceFolder}"
+            "src path"
         }
     ]
 }

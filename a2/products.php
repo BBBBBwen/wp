@@ -43,7 +43,7 @@
         <span id="close1" class='close-button'>×</span>
       </div>
       <div class="main2">
-        <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=signin' method='post' enctype=''>
+        <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=login' method='post' enctype=''>
           <div class='alignt'>
             <label>EmailAddress</label>
           </div>
@@ -108,6 +108,7 @@
         </div>
       </div>
   <noscript>javascript disabled</noscript>
+  <main>
   <div class='fullpro'>
   <span class='pros'>
     <a href="product.php" target='_top'>
@@ -138,6 +139,7 @@
     <div>
       <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
     </div>
+    </main>
   </footer>
   <script src="js/number.js"></script>
 </body>

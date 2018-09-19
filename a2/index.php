@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Assignment 2</title>
+  <title>Assignment2</title>
   <!-- Keep wireframe.css for debugging, add your css to style.css -->
   <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
   <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
@@ -13,10 +13,7 @@
 <body>
   <div class='bar'>
     <div class='logo'>
-      <img src='../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=50 width=50/>
-    </div>
-    <div class='logoword'>
-      <h1>CaptainRouge</h1>
+      <img src='../../A2media/CRLogo.jpg' alt='Captain Rouge logo' height=50 width=50 />
     </div>
     <nav class='topbar'>
       <div class='tab'>
@@ -65,49 +62,49 @@
     </div>
   </div>
   <div id='bgd2' class='bgdc'>
-        <div class="main1">
-          <div class="close">
-            SignUp
-            <span id="close2" class='close-button'>×</span>
-          </div>
-          <div class="main2">
-            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=signup' method='post' enctype=''>
-              <div>
-                <label>EmailAddress</label>
-              </div>
-              <div class='alignt'>
-                <input type='email' name='email' value='' class='input' placeholder='enter your email address' required />
-              </div>
-              <div>
-                <label>UserName</label>
-              </div>
-              <div class='alignt'>
-                <input type='text' name='username' value='' class='input' placeholder='enter your user name' required />
-              </div>
-              <div>
-                <label>Password</label>
-              </div>
-              <div class='alignt'>
-                <input type='password' name='password' value='' class='input' required />
-              </div>
-              <div>
-                <label>Gender</label>
-              </div>
-              <div class='alignt'>
-              <input type='radio' name='gender' value='male' class='gen' required/>Male
-              <input type='radio' name='gender' value='female' class='gen' required/>Female
-            </div>
-            <div>
-                <label>Date of Birth</label>
-              </div>
-              <div class='alignt'>
-                <input type='text' name='DateofBirth' value='' class='input' placeholder='dd/mm/yy' required />
-            </div>
-                <button type='submit' name='signup' class='btn'>SignUp</button>
-            </form>
-          </div>
-        </div>
+    <div class="main1">
+      <div class="close">
+        SignUp
+        <span id="close2" class='close-button'>×</span>
       </div>
+      <div class="main2">
+        <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=signup' method='post' enctype=''>
+          <div>
+            <label>EmailAddress</label>
+          </div>
+          <div class='alignt'>
+            <input type='email' name='email' value='' class='input' placeholder='enter your email address' required />
+          </div>
+          <div>
+            <label>UserName</label>
+          </div>
+          <div class='alignt'>
+            <input type='text' name='username' value='' class='input' placeholder='enter your user name' required />
+          </div>
+          <div>
+            <label>Password</label>
+          </div>
+          <div class='alignt'>
+            <input type='password' name='password' value='' class='input' required />
+          </div>
+          <div>
+            <label>Gender</label>
+          </div>
+          <div class='alignt'>
+            <input type='radio' name='gender' value='male' class='gen' required />Male
+            <input type='radio' name='gender' value='female' class='gen' required />Female
+          </div>
+          <div>
+            <label>Date of Birth</label>
+          </div>
+          <div class='alignt'>
+            <input type='text' name='DateofBirth' value='' class='input' placeholder='dd/mm/yy' required />
+          </div>
+          <button type='submit' name='signup' class='btn'>SignUp</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <main>
     <section class='sec'>
       <h2>The best fish & chips you can find in Dandenong</h2>
@@ -122,11 +119,13 @@
       <script>
         document.write(new Date().getFullYear());
       </script>Bowen Zhang s3617571, Cheng Chen s3728207 A2-s3617571-s3728207.</div>
-    <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming
+    <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
+      Programming
       course at RMIT University in Melbourne, Australia.</div>
     <div>
       <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
     </div>
   </footer>
 </body>
+
 </html>

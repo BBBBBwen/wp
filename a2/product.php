@@ -43,7 +43,7 @@
             <span id="close1" class='close-button'>×</span>
           </div>
           <div class="main2">
-            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=signin' method='post' enctype=''>
+            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=login' method='post' enctype=''>
               <div class='alignt'>
                 <label>EmailAddress</label>
               </div>
@@ -108,6 +108,7 @@
         </div>
       </div>
   <noscript>javascript disabled</noscript>
+  <main>
   <span class='full'>
     <div class='propic'>
       <img src='../../A2media/Chips.jpg' alt='Chips' height=400px width=400px/>
@@ -118,7 +119,7 @@
         <h3>Chips</h3>
         <p class='desc'>Price<br />Small : $3.5<br />Medium : $4.5<br />Large : $5.5</p>
       </div>
-      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype='' onsubmit="return check()">
+      <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype='' targe=_blank onsubmit="return check();" >
         <div class='shop'>
           <input type='hidden' name='id' value='cr001' />
           <div>
@@ -131,7 +132,7 @@
           </div>
           <div id='qtydiv'>
             <button class='qty' type='button' onclick="minu('Chipsqty')" name='btn'>-</button>
-            <input type='text' id='Chipsqty' class='qty' name='qty' value="0" />
+            <input type='text' id='Chipsqty' class='qty' name='qty' value="0"/>
             <button class='qty' type='button' onclick="add('Chipsqty')" name='btn'>+</button>
           </div>
         </div>
@@ -143,6 +144,7 @@
       </form>
     </div>
   </span>
+  </main>
   <footer>
     <div>&copy;
       <script>
