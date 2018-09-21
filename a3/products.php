@@ -23,13 +23,13 @@
 
             </span>
             <span class='pro'>
-                <a href="burger.php" target='_top'>
+                <a href="FishBurger.php" target='_top'>
                     <img src='../../A3media/Fish Burger.jpg' alt='FishBurger' class='proImg' />
                 </a>
                 <h3>FishBurger</h3>
             </span>
             <span class='pro'>
-                <a href="fishnchips.php" target='_top'>
+                <a href="FishChips.php" target='_top'>
                     <img src='../../A3media/Fish&Chips.jpg' alt='Fish&Chips' class='proImg' />
                 </a>
                 <h3>Fish&Chips</h3>
