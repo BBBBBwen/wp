@@ -26,7 +26,7 @@
     font-size: 20px;
     letter-spacing: 3px;
     float: left;
-    color: whitesmoke;
+    color: black;
 }
 
 .logo {
@@ -44,17 +44,18 @@
 }
 
 .titleContainer {
-    top: 0;
-    height: 40px;
+    height: 3em;
     width: auto;
-    margin-top: 5px;
+    margin-top: -1%;
     padding: 10px;
-    background-color: inherit;
+    background-color: whitesmoke;
 }
 
 .topBar {
+    position: sticky;
     background-color: bisque;
-    height: 50px;
+    height: 4em;
+    width: 100%;
 }
 
 .shadow {
@@ -62,58 +63,223 @@
 }
 
 .logoImage {
+    height: inherit;
     float: left;
     position: relative;
 }
 
 .link {
     background-color: inherit;
-    font: bold 20px arial;
-    height: 50px;
+    font: bold 20px cursive;
+    height: inherit;
     width: 100px;
     border: none;
-    text-align: center;
 }
 
 .tabLeft {
     height: inherit;
     float: left;
     position: relative;
-    align-items: center;
-    width: 400px;
-    height: 80px;
+    text-align: center;
+    width: 15em;
 }
 
 .tabRight {
     height: inherit;
     float: right;
     position: relative;
-    align-items: center;
-    width: 250px;
-    height: 80px;
+    text-align: center;
+    width: 15em;
 }
 
-.topNav {
-    height: inherit;
-}
-main{
+main {
     width: auto;
 }
 
+.inheight {
+    height: inherit;
+}
+
 .picture {
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    width: 100%;
     background-size: contain;
 }
 
 footer {
-    display: block;
     position: relative;
-    width: auto;
-    height: 5em;
-    margin-bottom: 0;
-    margin-top: 3em;
-    align-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
+}
+
+.bgdc {
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main1 {
+    background: snow;
+    width: 300px;
+    height: fit-content;
+    margin: 12% auto;
+    overflow: auto;
+}
+
+.close {
+    font: bold 25px caption;
+    padding: 10px;
+    background: indianred;
+}
+
+.close-button {
+    float: right;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+.main2 {
+    background: snow;
+    padding: 20px;
+}
+
+a {
+    color: rgb(1, 8, 10);
+    text-decoration: none;
+}
+
+.alignt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gen {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input {
+    border: 1px solid #dad8de;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+a:active {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+}
+
+.dateofbirth {
+    display: flex;
+}
+
+.btn {
+    margin-top: 10px;
+    height: 25px;
+    width: 100%;
+    background-color: indianred;
+    border: inherit;
+}
+
+.products {
+    margin-left: 4em;
+    display: flex;
+}
+
+.pro {
+    width: inherit;
+    margin: 5px;
+    text-align: center;
+}
+
+.proImg {
+    width: 20em;
+    height: 15em;
+}
+
+h3 {
+    font-family: inherit;
+}
+
+.dis-flex {
+    display: flex;
+}
+
+.category {
+    font: 2em italic;
+}
+
+.area {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.sigImg {
+    width: inherit;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.img-area {
+    width: 40em;
+}
+
+.pro-detail {
+    margin-left: 10em;
+    text-align: center;
+}
+
+.topic {
+    margin-top:10%;
+    margin-bottom: 2em;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 5em;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.btn1 {
+    margin-top: 10px;
+    height: 3em;
+    width: 80%;
+    background-color: indianred;
+    border: solid;
+}
+.price{
+    margin-top: 10%;
+    font: 20px arial;
+}
+.select {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.confirm-btn{
+    margin-top:10%;
 }
