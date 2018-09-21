@@ -69,6 +69,9 @@
 }
 
 .link {
+    display: grid;
+    float: left;
+    align-items: center;
     background-color: inherit;
     font: bold 20px cursive;
     height: inherit;
@@ -183,7 +186,7 @@ a:active {
 }
 
 a:visited {
-    color: black;
+    color: grey;
 }
 
 .dateofbirth {
@@ -250,7 +253,7 @@ h3 {
 }
 
 .topic {
-    margin-top:10%;
+    margin-top: 10%;
     margin-bottom: 2em;
     letter-spacing: 2px;
 }
@@ -272,14 +275,17 @@ h2 {
     background-color: indianred;
     border: solid;
 }
-.price{
+
+.price {
     margin-top: 10%;
     font: 20px arial;
 }
+
 .select {
     margin-top: 2em;
     margin-bottom: 2em;
 }
-.confirm-btn{
-    margin-top:10%;
+
+.confirm-btn {
+    margin-top: 10%;
 }

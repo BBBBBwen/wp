@@ -53,7 +53,7 @@ qty[0].onchange = function () {
             smt[i].style.color = "black";
             smt[i].disabled = false;
         }
-    } else if (qty[0].value <= 0||isNaN(parseInt(qty))){
+    } else if (qty[0].value <= 0 || isNaN(parseInt(qty))) {
         for (i = 0; i < smt.length; i++) {
             smt[i].style.color = "grey";
             smt[i].disabled = true;
@@ -66,7 +66,7 @@ qty[0].onfocus = function () {
             smt[i].style.color = "black";
             smt[i].disabled = false;
         }
-    } else if(qty[0].value <= 0||isNaN(parseInt(qty))){
+    } else if (qty[0].value <= 0 || isNaN(parseInt(qty))) {
         for (i = 0; i < smt.length; i++) {
             smt[i].style.color = "grey";
             smt[i].disabled = true;

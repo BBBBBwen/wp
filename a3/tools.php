@@ -32,12 +32,8 @@ function top_nav(){
               <img class='logoImage' src='../../A2media/CRLogo.jpg' alt='Captain Rouge logo' />
           
               <div class='tabLeft'>
-                <button type='button' class='link'>
-                  <a class='noUnderLine' href="index.php" target='_top'>Home</a>
-                </button>
-                <button type='button' class='link'>
-                  <a class='noUnderLine' href="products.php" target='_top'>Products</a>
-                </button>
+                  <a class='link' href="index.php" target='_top'>Home</a>
+                  <a class='link' href="products.php" target='_top'>Products</a>
               </div>
               <div class='tabRight'>
                 <button type='button' id='sibtn' class='link'>

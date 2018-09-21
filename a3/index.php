@@ -4,9 +4,9 @@
     top_nav();
     sign();
 ?>
-  <main class='area'>
-    <img src='../../A3media/homepic.jpg' class='picture' alt='img3' />
-  </main>
+<main class='area'>
+  <img src='../../A3media/homepic.jpg' class='picture' alt='img3' />
+</main>
 <?php
 end_module(); 
 ?>
