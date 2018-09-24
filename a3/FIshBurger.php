@@ -1,6 +1,6 @@
 <?php
-  require_once('tools.php'); 
-    top_module("FishBurger");
+  require_once 'tools.php';
+    top_module('FishBurger');
     top_nav();
     sign();
 ?>
@@ -18,7 +18,7 @@
             <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''
                 targe=_blank onsubmit="return check();">
                 <div class='shop'>
-                    <input type='hidden' name='id' value='cr001' />
+                    <input type='hidden' name='id' value='b001' />
                     <div class='select'>
                         <select id='select' name='sauce' required>
                             <option value='' selected>Sauce</option>
@@ -42,5 +42,5 @@
     </span>
 </main>
 <?php
-end_module(); 
+end_module();
 ?>

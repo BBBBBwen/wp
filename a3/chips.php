@@ -1,6 +1,6 @@
 <?php
-  require_once('tools.php'); 
-    top_module("chips");
+  require_once 'tools.php';
+    top_module('chips');
     top_nav();
     sign();
 ?>
@@ -19,7 +19,7 @@
             <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''
                 targe=_blank onsubmit="return check();">
                 <div class='shop'>
-                    <input type='hidden' name='id' value='cr001' />
+                    <input type='hidden' name='id' value='s001' />
                     <div class='select'>
                         <select id='select' name='size' required>
                             <option value='' selected>Size</option>
@@ -43,5 +43,5 @@
     </span>
 </main>
 <?php
-end_module(); 
+end_module();
 ?>

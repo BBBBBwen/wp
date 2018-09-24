@@ -1,6 +1,7 @@
 <?php
-function top_module($pageTitle) {
-$html =<<<"OUTPUT"
+function top_module($pageTitle)
+{
+    $html = <<<"OUTPUT"
 <!DOCTYPE html>
     <html lang='en'>
     <head>
@@ -12,12 +13,11 @@ $html =<<<"OUTPUT"
     </head>
 OUTPUT;
     echo $html;
-    }
-?>
+}
 
-<?php
-function top_nav(){
-    $html =<<<"OUTPUT"
+function top_nav()
+{
+    $html = <<<"OUTPUT"
     <body class='backGround'>
             <header class='titleContainer'>
               <div class='topLeft title'>
@@ -47,11 +47,10 @@ function top_nav(){
 OUTPUT;
     echo $html;
 }
-?>
 
-<?php
-function Sign(){
-    $html=<<<"OUTPUT"
+function Sign()
+{
+    $html = <<<"OUTPUT"
     <div id='bgd1' class='bgdc'>
             <div class="main1">
               <div class="close">
@@ -59,7 +58,7 @@ function Sign(){
                 <span id="close1" class='close-button'>×</span>
               </div>
               <div class="main2">
-                <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=login' method='post' enctype=''>
+                <form action='processing.php' method='get' enctype=''>
                   <div class='alignt'>
                     <label>EmailAddress</label>
                   </div>
@@ -86,7 +85,7 @@ function Sign(){
                 <span id="close2" class='close-button'>×</span>
               </div>
               <div class="main2">
-                <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=signup' method='post' enctype=''>
+                <form action='processing.php' method='post' enctype=''>
                   <div>
                     <label>EmailAddress</label>
                   </div>
@@ -124,12 +123,12 @@ function Sign(){
             </div>
           </div>
 OUTPUT;
-echo $html;        
+    echo $html;
 }
-?>
-<?php
-function end_module(){
-$html=<<<"OUTPUT"
+
+function end_module()
+{
+    $html = <<<"OUTPUT"
 <script src="js/number.js"></script>
 <footer>
 <div>&copy;
@@ -144,6 +143,6 @@ spreadsheet</a> here. <button id='toggleWireframeCSS' onclick='toggleWireframe()
 </body>
 </html>
 OUTPUT;
-echo $html;
+    echo $html;
 }
-?>
+
