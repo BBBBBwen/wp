@@ -34,6 +34,7 @@ function top_nav()
               <div class='tabLeft'>
                   <a class='link' href="index.php" target='_top'>Home</a>
                   <a class='link' href="products.php" target='_top'>Products</a>
+                  <a class='link' href="Cart Page.php" target='_top'>Cart</a>
               </div>
               <div class='tabRight'>
                 <button type='button' id='sibtn' class='link'>

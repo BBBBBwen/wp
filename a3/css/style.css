@@ -64,8 +64,8 @@
 
 .logoImage {
     height: inherit;
-    float: left;
-    position: relative;
+   left: 0;
+    position: absolute;
 }
 
 .link {
@@ -80,19 +80,20 @@
 }
 
 .tabLeft {
+    margin-left: 4em;
     height: inherit;
     float: left;
-    position: relative;
+    position: absolute;
     text-align: center;
-    width: 15em;
+    width: max-content;
 }
 
 .tabRight {
     height: inherit;
-    float: right;
-    position: relative;
+    right: 0;
+    position: absolute;
     text-align: center;
-    width: 15em;
+    width: max-content;
 }
 
 main {
@@ -288,4 +289,20 @@ h2 {
 
 .confirm-btn {
     margin-top: 10%;
+}
+.row{
+    width: 100%;
+}
+.border{
+    border-bottom: 1px solid #DDD;
+}
+
+.nameCol{
+    width: 60%; 
+}
+.priceCol{
+    width: 15%;
+}
+.qtyCol{
+    width:15%;
 }
