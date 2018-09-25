@@ -20,8 +20,8 @@ function top_nav()
     $html = <<<"OUTPUT"
     <body class='backGround'>
             <header class='titleContainer'>
-              <div class='topLeft title'>
-                <a class='logo noUnderLine' href="index.php">CaptainRouge</a>
+<div class='topLeft title'>
+<a class='logo noUnderLine' href="index.php">CaptainRouge</a>
               </div>
               <div class='title tap'>
                 <div class='topRight'>The best fish & chips in Dandenong
@@ -145,4 +145,3 @@ spreadsheet</a> here. <button id='toggleWireframeCSS' onclick='toggleWireframe()
 OUTPUT;
     echo $html;
 }
-

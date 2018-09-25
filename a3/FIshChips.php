@@ -7,7 +7,7 @@
 <main class='area'>
     <span class="dis-flex inheight">
         <aside class='img-area inheight'>
-            <img src='../../A3media/Chips.jpg' alt='Chips' class='sigImg' />
+            <img src='../../A3media/Fish&Chips.jpg' alt='Chips' class='sigImg' />
         </aside>
         <div class='pro-detail'>
             <div class='topic'>
