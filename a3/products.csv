@@ -4,7 +4,7 @@ s001	MED	Chips	Classic thick cut fries with sea salt made from Australian grown 
 s001	LRG	Chips	Classic thick cut fries with sea salt made from Australian grown potatoes.	large	5.5
 b001	BBQ	FishBurger	Deep fried fish with fresh lettuce. Gluten free grilled bun.	BBQ	9.5
 b001	CHI	FishBurger	Deep fried fish with fresh lettuce. Gluten free grilled bun.	Chilli	9.5
-b001	TOM	FIshBurger	Deep fried fish with fresh lettuce. Gluten free grilled bun.	Ketchup	9.5
-bm001	SNP	FishChips	Thin cut deep fried chips with classic fried fish.	Salt&Pepper	8.5
+b001	KET	FIshBurger	Deep fried fish with fresh lettuce. Gluten free grilled bun.	Ketchup	9.5
+bm001	SAL	FishChips	Thin cut deep fried chips with classic fried fish.	Salt&Pepper	8.5
 bm001	CHI	FishChips	Thin cut deep fried chips with classic fried fish.	Chilli	8.5
-bm001	PRI	FishChips	Thin cut deep fried chips with classic fried fish.	PeriPeri	8.5
+bm001	PER	FishChips	Thin cut deep fried chips with classic fried fish.	PeriPeri	8.5

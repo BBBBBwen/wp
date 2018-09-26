@@ -118,7 +118,7 @@ function Sign()
                   <div class='alignt'>
                     <input type='text' name='DateofBirth' value='' class='input' placeholder='dd/mm/yy' required />
                   </div>
-                  <button type='submit' name='signup' class='btn'>SignUp</button>
+                  <button type='submit' class='btn'>SignUp</button>
                 </form>
               </div>
             </div>
@@ -146,3 +146,17 @@ spreadsheet</a> here. <button id='toggleWireframeCSS' onclick='toggleWireframe()
 OUTPUT;
     echo $html;
 }
+
+
+  $products;
+    $file = fopen("products.csv", "r");
+    flock($file, LOCK_SH);
+    if (($headings = fgetcsv($file, 0, "\t")) !== false) {
+        while ($cells = fgetcsv($file, 0, "\t")) {
+            for ($i = 2;$i<count($cells); $i++) {
+                $products[$cells[0]][$cells[1]][$headings[$i]]=$cells[$i];
+            }
+        }
+    }
+    fclose($file);
+    flock(LOCK_UN);

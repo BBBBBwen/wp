@@ -11,20 +11,32 @@
         </aside>
         <div class='pro-detail'>
             <div class='topic'>
-                <h1>Fish & Chips</h1>
-                <h2 class='text'>Thin cut deep fried chips with classic fried fish. Choose your flavour! (Sea salt and
-                    pepper by default)</h2>
-                <p class='price'>Price: $8.5</p>
+                <h1>
+                    <?php echo $products['bm001']['SAL']['Title']; ?>
+                </h1>
+                <h2 class='text'>
+                    <?php echo $products['bm001']['SAL']['Description']; ?>
+                </h2>
+                <p class='price'>
+                    <?php printf("Pirce<br/>Salt&Pepper : $%1.2f<br />Chilli : $%1.2f<br />PeriPeri : $%1.2f", $products['bm001']['SAL']['Price'], $products['bm001']['CHI']['Price'], $products['bm001']['PER']['Price']);?>
+                </p>
             </div>
             <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''
                 targe=_blank onsubmit="return check();">
                 <div class='shop'>
                     <input type='hidden' name='id' value='bm001' />
                     <div class='select'>
+                    <select id='select' name='flavour' required>
                         <option value='' selected>Flavour</option>
-                        <option value="Salt & Pepper">Salt & Pepper</option>
-                        <option value="Chilli">Chilli</option>
-                        <option value="Peri Peri">Peri Peri</option>
+                        <option value="Salt & Pepper">
+                            <?php echo $products['bm001']['SAL']['Option'] ?>
+                        </option>
+                        <option value="Chilli">
+                            <?php echo $products['bm001']['CHI']['Option'] ?>
+                        </option>
+                        <option value="Peri Peri">
+                            <?php echo $products['bm001']['PER']['Option'] ?>
+                        </option>
                         </select>
                     </div>
                     <div id='qtydiv'>
@@ -43,4 +55,3 @@
 </main>
 <?php
 end_module();
-?>

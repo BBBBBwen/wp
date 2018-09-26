@@ -11,9 +11,15 @@
         </aside>
         <div class='pro-detail'>
             <div class='topic'>
-                <h1>FishBurger</h1>
-                <h2 class='text'>Deep fried fish with fresh lettuce. Gluten free grilled bun. Choose the sauce of your own!</h2>
-                <p class='price'>Price: $9.5</p>
+                <h1>
+                    <?php echo $products['b001']['BBQ']['Title'] ?>
+                </h1>
+                <h2 class='text'>
+                    <?php echo $products['b001']['BBQ']['Description']; ?>
+                </h2>
+                <p class='price'>
+                    <?php printf("Pirce<br/>BBQ : $%1.2f<br />Chilli : $%1.2f<br />Ketchup : $%1.2f", $products['b001']['BBQ']['Price'], $products['b001']['CHI']['Price'], $products['b001']['KET']['Price']);?>
+                </p>
             </div>
             <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''
                 targe=_blank onsubmit="return check();">
@@ -22,9 +28,15 @@
                     <div class='select'>
                         <select id='select' name='sauce' required>
                             <option value='' selected>Sauce</option>
-                            <option value="BBQ">BBQ</option>
-                            <option value="Chilli">Chilli</option>
-                            <option value="Ketchup">Ketchup</option>
+                            <option value="BBQ">
+                                <?php echo $products['b001']['BBQ']['Option'] ?>
+                            </option>
+                            <option value="Chilli">
+                                <?php echo $products['b001']['CHI']['Option'] ?>
+                            </option>
+                            <option value="Ketchup">
+                                <?php echo $products['b001']['KET']['Option'] ?>
+                            </option>
                         </select>
                     </div>
                     <div id='qtydiv'>
@@ -34,8 +46,8 @@
                     </div>
                 </div>
                 <div class='confirm-btn'>
-                    <input type='submit' id='submit1' class='btn1' name='submit cart' value='Buy now' />
-                    <input type='submit' id='submit2' class='btn1' name='submit cart' value='add to cart' />
+                    <input type='submit' id='submit1' class='btn1' value='Buy now' />
+                    <input type='submit' id='submit2' class='btn1' value='add to cart' />
                 </div>
             </form>
         </div>
@@ -43,4 +55,3 @@
 </main>
 <?php
 end_module();
-?>

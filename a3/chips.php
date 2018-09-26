@@ -11,10 +11,15 @@
         </aside>
         <div class='pro-detail'>
             <div class='topic'>
-                <h1>Chips</h1>
-                <h2 class='text'>Classic thick cut fries with sea salt made from Australian grown potatoes. Ketchup
-                    included with every order. Great companion with burgers.</h2>
-                <p class='price'>Price<br />Small : $3.5<br />Medium : $4.5<br />Large : $5.5</p>
+                <h1>
+                    <?php echo $products['s001']['SML']['Title'] ?>
+                </h1>
+                <h2 class='text'>
+                    <?php echo $products['s001']['SML']['Description']; ?>
+                </h2>
+                <p class='price'>
+                    <?php printf("Pirce<br/>Small : $%1.2f<br />Medium : $%1.2f<br />Large : $%1.2f", $products['s001']['SML']['Price'], $products['s001']['MED']['Price'], $products['s001']['LRG']['Price']);?>
+                </p>
             </div>
             <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''
                 targe=_blank onsubmit="return check();">
@@ -23,9 +28,15 @@
                     <div class='select'>
                         <select id='select' name='size' required>
                             <option value='' selected>Size</option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="Large">Large</option>
+                            <option value="small">
+                                <?php echo $products['s001']['SML']['Option'] ?>
+                            </option>
+                            <option value="medium">
+                                <?php echo $products['s001']['MED']['Option'] ?>
+                            </option>
+                            <option value="Large">
+                                <?php echo $products['s001']['LRG']['Option'] ?>
+                            </option>
                         </select>
                     </div>
                     <div id='qtydiv'>
@@ -35,8 +46,8 @@
                     </div>
                 </div>
                 <div class='confirm-btn'>
-                    <input type='submit' id='submit1' class='btn1' name='submit cart' value='Buy now' />
-                    <input type='submit' id='submit2' class='btn1' name='submit cart' value='add to cart' />
+                    <input type='submit' id='submit1' class='btn1' value='Buy now' />
+                    <input type='submit' id='submit2' class='btn1' value='add to cart' />
                 </div>
             </form>
         </div>
@@ -44,4 +55,3 @@
 </main>
 <?php
 end_module();
-?>

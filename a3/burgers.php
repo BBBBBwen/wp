@@ -3,6 +3,7 @@
     top_module("products");
     top_nav();
     sign();
+    getFile("products.csv");
 ?>
 <main class='area'>
     <div class='dis-flex'>
@@ -16,7 +17,7 @@
     </aside>
     <div class='products'>
         <span class='pro'>
-            <a href="burger.php" target='_top'>
+            <a href="FishBurger.php" target='_top'>
                 <img src='../../A3media/Fish Burger.jpg' alt='FishBurger' class='proImg' />
             </a>
             <h3>FishBurger</h3>
