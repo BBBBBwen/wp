@@ -135,10 +135,10 @@ function end_module()
 <div>&copy;
 <script>
 document.write(new Date().getFullYear());
-</script> Put your name(s), student number(s) and group name here.</div>
+</script> Bowen Zhang s3617571, Cheng Chen s3728207 A2-s3617571-s3728207</div>
 <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
 Programming course at RMIT University in Melbourne, Australia.</div>
-<div>Maintain links to your <a href='products.txt'>products spreadsheet</a> and <a href='orders.txt'>orders
+<div>Maintain links to your <a href='products.csv'>products spreadsheet</a> and <a href='orders.csv'>orders
 spreadsheet</a> here. <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 </footer>
 </body>
