@@ -1,4 +1,5 @@
 <?php
+session_start();
 function top_module($pageTitle)
 {
     $html = <<<"OUTPUT"
@@ -34,7 +35,7 @@ function top_nav()
               <div class='tabLeft'>
                   <a class='link' href="index.php" target='_top'>Home</a>
                   <a class='link' href="products.php" target='_top'>Products</a>
-                  <a class='link' href="Cart Page.php" target='_top'>Cart</a>
+                  <a class='link' href="Cart.php" target='_top'>Cart</a>
               </div>
               <div class='tabRight'>
                 <button type='button' id='sibtn' class='link'>
@@ -44,6 +45,37 @@ function top_nav()
                   <a>SignUp</a>
                 </button>
               </div>
+            </nav>
+OUTPUT;
+    echo $html;
+}
+function top_nav_false()
+{
+    $html = <<<"OUTPUT"
+    <body class='backGround'>
+            <header class='titleContainer'>
+<div class='topLeft title'>
+<a class='logo noUnderLine' href="index.php">CaptainRouge</a>
+              </div>
+              <div class='title tap'>
+                <div class='topRight'>The best fish & chips in Dandenong
+                </div>
+              </div>
+            </header>
+            <nav class="shadow topBar">
+              <img class='logoImage' src='../../A2media/CRLogo.jpg' alt='Captain Rouge logo' />
+          
+              <div class='tabLeft'>
+                  <a class='link' href="index.php" target='_top'>Home</a>
+                  <a class='link' href="products.php" target='_top'>Products</a>
+              </div>
+              <div class='tabRight'>
+              <form action='Logout.php' method='post' enctype=''>
+              <button type='button' id='logout' class='link'>
+                <a>Log out</a>
+              </button>
+            </div>
+            </form>
             </nav>
 OUTPUT;
     echo $html;
@@ -59,7 +91,7 @@ function Sign()
                 <span id="close1" class='close-button'>×</span>
               </div>
               <div class="main2">
-                <form action='processing.php' method='get' enctype=''>
+                <form action='Login.php' method='post' enctype=''>
                   <div class='alignt'>
                     <label>EmailAddress</label>
                   </div>
@@ -73,7 +105,7 @@ function Sign()
                     <input type='password' name='password' class='input' value='' required />
                   </div>
                   <div class='alignt'>
-                    <button type='submit' name='signin' class='btn'>Log in</button>
+                    <button type='submit' class='btn'>Log in</button>
                   </div>
                 </form>
               </div>
@@ -86,7 +118,7 @@ function Sign()
                 <span id="close2" class='close-button'>×</span>
               </div>
               <div class="main2">
-                <form action='processing.php' method='post' enctype=''>
+                <form action='Register.php' method='post' enctype=''>
                   <div>
                     <label>EmailAddress</label>
                   </div>
@@ -147,14 +179,21 @@ OUTPUT;
     echo $html;
 }
 
-
+function addCart(){
+  if(isset($_POST['id'],$_POST['option'],$_POST['qty'])){
+    $_SESSION["cart"]["id"] = $_POST["id"];
+    $_SESSION["cart"]["option"] = $_POST["option"];
+    $_SESSION["cart"]["qty"] = $_POST["qty"];
+    header(Cart.php);
+}
+}
   $products;
     $file = fopen("products.csv", "r");
     flock($file, LOCK_SH);
     if (($headings = fgetcsv($file, 0, "\t")) !== false) {
         while ($cells = fgetcsv($file, 0, "\t")) {
-            for ($i = 2;$i<count($cells); $i++) {
-                $products[$cells[0]][$cells[1]][$headings[$i]]=$cells[$i];
+            for ($i = 1;$i<count($cells); $i++) {
+                $products[$cells[0]][$headings[$i]][]=$cells[$i];
             }
         }
     }

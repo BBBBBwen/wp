@@ -3,6 +3,7 @@
     top_module('FishChips');
     top_nav();
     sign();
+    addCart();
 ?>
 <main class='area'>
     <span class="dis-flex inheight">
@@ -12,30 +13,30 @@
         <div class='pro-detail'>
             <div class='topic'>
                 <h1>
-                    <?php echo $products['bm001']['SAL']['Title']; ?>
+                    <?php echo $products['bm001']['Title'][0]; ?>
                 </h1>
                 <h2 class='text'>
-                    <?php echo $products['bm001']['SAL']['Description']; ?>
+                    <?php echo $products['bm001']['Description'][0]; ?>
                 </h2>
                 <p class='price'>
-                    <?php printf("Pirce<br/>Salt&Pepper : $%1.2f<br />Chilli : $%1.2f<br />PeriPeri : $%1.2f", $products['bm001']['SAL']['Price'], $products['bm001']['CHI']['Price'], $products['bm001']['PER']['Price']);?>
+                    <?php  printf("Pirce<br/>Salt&Pepper : $%1.2f<br />Chilli : $%1.2f<br />PeriPeri : $%1.2f", $products['bm001']['Price'][0], $products['bm001']['Price'][1], $products['bm001']['Price'][2]);?>
                 </p>
             </div>
-            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''
-                targe=_blank onsubmit="return check();">
+            <form action='FishChips.php?id=bm001' method='post' enctype=''
+                targe=_blank>
                 <div class='shop'>
                     <input type='hidden' name='id' value='bm001' />
                     <div class='select'>
-                    <select id='select' name='flavour' required>
+                    <select id='select' name='option' required>
                         <option value='' selected>Flavour</option>
-                        <option value="Salt & Pepper">
-                            <?php echo $products['bm001']['SAL']['Option'] ?>
+                        <option value="0">
+                            <?php echo $products['bm001']['Option'][0] ?>
                         </option>
-                        <option value="Chilli">
-                            <?php echo $products['bm001']['CHI']['Option'] ?>
+                        <option value="1">
+                            <?php echo $products['bm001']['Option'][1] ?>
                         </option>
-                        <option value="Peri Peri">
-                            <?php echo $products['bm001']['PER']['Option'] ?>
+                        <option value="2">
+                            <?php echo $products['bm001']['Option'][2] ?>
                         </option>
                         </select>
                     </div>

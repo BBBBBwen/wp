@@ -3,6 +3,7 @@
     top_module('chips');
     top_nav();
     sign();
+    addCart();
 ?>
 <main class='area'>
     <span class="dis-flex inheight">
@@ -12,30 +13,30 @@
         <div class='pro-detail'>
             <div class='topic'>
                 <h1>
-                    <?php echo $products['s001']['SML']['Title'] ?>
+                    <?php echo $products['s001']['Title'][0] ?>
                 </h1>
                 <h2 class='text'>
-                    <?php echo $products['s001']['SML']['Description']; ?>
+                    <?php echo $products['s001']['Description'][0]; ?>
                 </h2>
                 <p class='price'>
-                    <?php printf("Pirce<br/>Small : $%1.2f<br />Medium : $%1.2f<br />Large : $%1.2f", $products['s001']['SML']['Price'], $products['s001']['MED']['Price'], $products['s001']['LRG']['Price']);?>
+                    <?php printf("Pirce<br/>Small : $%1.2f<br />Medium : $%1.2f<br />Large : $%1.2f", $products['s001']['Price'][0], $products['s001']['Price'][1], $products['s001']['Price'][2]);?>
                 </p>
             </div>
-            <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product' method='post' enctype=''
-                targe=_blank onsubmit="return check();">
+            <form action='chips.php?id=s001' method='post' enctype=''
+                targe=_blank>
                 <div class='shop'>
                     <input type='hidden' name='id' value='s001' />
                     <div class='select'>
-                        <select id='select' name='size' required>
+                        <select id='select' name='option' required>
                             <option value='' selected>Size</option>
-                            <option value="small">
-                                <?php echo $products['s001']['SML']['Option'] ?>
+                            <option value="0">
+                                <?php echo $products['s001']['Option'][0] ?>
                             </option>
-                            <option value="medium">
-                                <?php echo $products['s001']['MED']['Option'] ?>
+                            <option value="1">
+                                <?php echo $products['s001']['Option'][1] ?>
                             </option>
-                            <option value="Large">
-                                <?php echo $products['s001']['LRG']['Option'] ?>
+                            <option value="2">
+                                <?php echo $products['s001']['Option'][2] ?>
                             </option>
                         </select>
                     </div>
