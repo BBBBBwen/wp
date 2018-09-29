@@ -16,10 +16,9 @@ fclose($file);
         if (isset($_SESSION["user"])) {
             unset($_SESSION["user"]);
         } elseif (!empty($_POST["email"])) {
-            $_SESSION["user"]["email"] = htmlentities($_POST["email"], ENT_QUOTES);
-            $_SESSION["user"]["loged"] = 1;
+            $_SESSION["user"] = htmlentities($_POST["email"], ENT_QUOTES);
         }
         header("Location: ".$_SERVER["HTTP_REFERER"]);
     } else {
-        header("Location: index.php");
-    };
+        header("Location: index.php?failed");
+    }

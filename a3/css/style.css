@@ -307,3 +307,19 @@ h2 {
 .qtyCol{
     width:15%;
 }
+.check{
+    text-align: right;
+}
+.btnCheck {
+    float: right;
+    text-align: center;
+    margin-left: 10px;
+    height: 25px;
+    width: 20%;
+    background-color: indianred;
+    border: inherit;
+}
+main{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}

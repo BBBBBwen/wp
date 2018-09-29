@@ -3,7 +3,6 @@
     top_module("products");
     top_nav();
     sign();
-    getFile("products.csv");
 ?>
 <main class='area'>
     <div class='dis-flex'>

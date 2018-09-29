@@ -22,7 +22,7 @@
                     <?php printf("Pirce<br/>Small : $%1.2f<br />Medium : $%1.2f<br />Large : $%1.2f", $products['s001']['Price'][0], $products['s001']['Price'][1], $products['s001']['Price'][2]);?>
                 </p>
             </div>
-            <form action='chips.php?id=s001' method='post' enctype=''
+            <form action='cart.php?id=s001' method='post' enctype=''
                 targe=_blank>
                 <div class='shop'>
                     <input type='hidden' name='id' value='s001' />

@@ -18,9 +18,10 @@ OUTPUT;
 
 function top_nav()
 {
-    $html = <<<"OUTPUT"
+    if (isset($_SESSION["user"]) && !empty($_SESSION["user"])) {
+        $html = <<<"OUTPUT"
     <body class='backGround'>
-            <header class='titleContainer'>
+    <header class='titleContainer'>
 <div class='topLeft title'>
 <a class='logo noUnderLine' href="index.php">CaptainRouge</a>
               </div>
@@ -38,22 +39,15 @@ function top_nav()
                   <a class='link' href="Cart.php" target='_top'>Cart</a>
               </div>
               <div class='tabRight'>
-                <button type='button' id='sibtn' class='link'>
-                  <a>Login</a>
-                </button>
-                <button type='button' id='subtn' class='link'>
-                  <a>SignUp</a>
-                </button>
-              </div>
+              <a class='link' href="index.php?action=logout">Log out</a>
+            </div>
             </nav>
 OUTPUT;
-    echo $html;
-}
-function top_nav_false()
-{
-    $html = <<<"OUTPUT"
+        echo $html;
+    } else {
+        $html = <<<"OUTPUT"
     <body class='backGround'>
-            <header class='titleContainer'>
+    <header class='titleContainer'>
 <div class='topLeft title'>
 <a class='logo noUnderLine' href="index.php">CaptainRouge</a>
               </div>
@@ -68,17 +62,21 @@ function top_nav_false()
               <div class='tabLeft'>
                   <a class='link' href="index.php" target='_top'>Home</a>
                   <a class='link' href="products.php" target='_top'>Products</a>
+                  <a class='link' id='logIn' href="Cart.php" target='_top'>Cart</a>
               </div>
               <div class='tabRight'>
-              <form action='Logout.php' method='post' enctype=''>
-              <button type='button' id='logout' class='link'>
-                <a>Log out</a>
-              </button>
-            </div>
-            </form>
+              <a class='link' href="tools.php?action=logout">Log out</a>
+                <button type='button' id='sibtn' class='link'>
+                  <a>Login</a>
+                </button>
+                <button type='button' id='subtn' class='link'>
+                  <a>SignUp</a>
+                </button>
+              </div>
             </nav>
 OUTPUT;
-    echo $html;
+        echo $html;
+    }
 }
 
 function Sign()
@@ -179,13 +177,14 @@ OUTPUT;
     echo $html;
 }
 
-function addCart(){
-  if(isset($_POST['id'],$_POST['option'],$_POST['qty'])){
-    $_SESSION["cart"]["id"] = $_POST["id"];
-    $_SESSION["cart"]["option"] = $_POST["option"];
-    $_SESSION["cart"]["qty"] = $_POST["qty"];
-    header(Cart.php);
-}
+function addCart()
+{
+    if (isset($_POST['id'],$_POST['option'],$_POST['qty'])) {
+        $_SESSION["cart"]["id"] = $_POST["id"];
+        $_SESSION["cart"]["option"] = $_POST["option"];
+        $_SESSION["cart"]["qty"] = $_POST["qty"];
+        header("Location: Cart.php");
+    }
 }
   $products;
     $file = fopen("products.csv", "r");
@@ -199,3 +198,9 @@ function addCart(){
     }
     fclose($file);
     flock(LOCK_UN);
+
+    if ($_GET['action'] == "logout") {
+        session_unset();
+        echo 'sucessfully loged out！Click here to <a href="index.php">return</a>';
+        exit;
+    }

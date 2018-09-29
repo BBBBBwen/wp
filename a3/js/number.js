@@ -85,3 +85,9 @@ function check() {
     }
     return true;
 }
+var loged = document.getElementById('logIn');
+function loged(){
+    sibtn.style.display = 'none';
+    loged.style.display = 'none';
+    subtn.style.display = 'none';
+}
