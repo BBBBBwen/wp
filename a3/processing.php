@@ -1,8 +1,6 @@
 <?php
 session_start();
-$_SESSION["cart"]["id"] = $_POST["id"];
-        $_SESSION["cart"]["option"] = $_POST["option"];
-        $_SESSION["cart"]["qty"] = $_POST["qty"];
+
 function preShow($arr, $returnAsString=false)
 {
     $ret = '<pre>' . print_r($arr, true) . '</pre>';
@@ -13,5 +11,9 @@ function preShow($arr, $returnAsString=false)
     }
 }
 
-$arr[] = $_SESSION['cart'];
-preShow($arr);
+if(!empty($_SESSION["cart"])){
+    $cart = array();
+    $cart = $_SESSION["cart"];
+}
+
+    preShow($cart);

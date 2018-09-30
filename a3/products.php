@@ -16,7 +16,7 @@
         </aside>
         <div class='products'>
             <span class='pro'>
-                <a href="chips.php" target='_top'>
+                <a href="chips.php?id=s001" target='_top'>
                     <img src='../../A3media/Chips.jpg' alt='Chips' class='proImg' />
                 </a>
                 <h3>Chips</h3>

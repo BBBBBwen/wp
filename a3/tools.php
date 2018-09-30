@@ -65,9 +65,9 @@ OUTPUT;
                   <a class='link' id='logIn' href="Cart.php" target='_top'>Cart</a>
               </div>
               <div class='tabRight'>
-              <a class='link' href="tools.php?action=logout">Log out</a>
+              <a class='link' href="tools.php?action=logout">LogOut</a>
                 <button type='button' id='sibtn' class='link'>
-                  <a>Login</a>
+                  <a>LogIn</a>
                 </button>
                 <button type='button' id='subtn' class='link'>
                   <a>SignUp</a>
@@ -179,11 +179,32 @@ OUTPUT;
 
 function addCart()
 {
+  
+  $arr[] = $_SESSION["cart"];
     if (isset($_POST['id'],$_POST['option'],$_POST['qty'])) {
         $_SESSION["cart"]["id"] = $_POST["id"];
         $_SESSION["cart"]["option"] = $_POST["option"];
         $_SESSION["cart"]["qty"] = $_POST["qty"];
-        header("Location: Cart.php");
+    }
+}
+function this_id_actually_exists($id){
+  $file = fopen("products.csv", "r");
+    flock($file, LOCK_SH);
+    if (($headings = fgetcsv($file, 0, "\t")) !== false) {
+        while ($cells = fgetcsv($file, 0, "\t")) {
+            for ($i = 0;$i<count($cells); $i++) {
+                $products[$headings[$i]][]=$cells[$i];
+            }
+        }
+    }
+    fclose($file);
+    flock(LOCK_UN);
+    for($i=0;$i<count($products[ID]);$i++){
+      if($id == $products[ID][$i]){
+        return true;
+      }else{
+        return false;
+      }
     }
 }
   $products;
