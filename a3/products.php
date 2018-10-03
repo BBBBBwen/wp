@@ -1,8 +1,11 @@
 <?php
-  require_once('tools.php'); 
+  require_once('tools.php');
     top_module("products");
     top_nav();
     sign();
+     if ($_GET['action']=="clear") {
+        unset($_SESSION["cart"]);
+    }
 ?>
 <main class='area'>
     <div class='dis-flex'>
@@ -16,21 +19,21 @@
         </aside>
         <div class='products'>
             <span class='pro'>
-                <a href="chips.php?id=s001" target='_top'>
-                    <img src='../../A3media/Chips.jpg' alt='Chips' class='proImg' />
+                <a href="Product.php?id=s001" target='_top'>
+                    <img src='../../A3media/s001.jpg' alt='Chips' class='proImg' />
                 </a>
                 <h3>Chips</h3>
 
             </span>
             <span class='pro'>
-                <a href="FishBurger.php" target='_top'>
-                    <img src='../../A3media/Fish Burger.jpg' alt='FishBurger' class='proImg' />
+                <a href="Product.php?id=b001" target='_top'>
+                    <img src='../../A3media/b001.jpg' alt='FishBurger' class='proImg' />
                 </a>
                 <h3>FishBurger</h3>
             </span>
             <span class='pro'>
-                <a href="FishChips.php" target='_top'>
-                    <img src='../../A3media/Fish&Chips.jpg' alt='Fish&Chips' class='proImg' />
+                <a href="Product.php?id=bm001" target='_top'>
+                    <img src='../../A3media/bm001.jpg' alt='Fish&Chips' class='proImg' />
                 </a>
                 <h3>Fish&Chips</h3>
             </span>
@@ -38,5 +41,4 @@
     </div>
 </main>
 <?php
-end_module(); 
-?>
+end_module();

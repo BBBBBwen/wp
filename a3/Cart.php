@@ -18,59 +18,50 @@ session_start();
         <?php
         if (isset($_POST['id'],$_POST['option'],$_POST['qty'])) {
             $id =$_POST["id"];
-            ;
-            $opt =$_POST["option"];
-            $title = $products[$id]['Title'][$opt];
-            $option = $products[$id]['Option'][$opt];
-            $price = $products[$id]['Price'][$opt];
+            $oid = $_POST["option"];
+            $order = $_POST;
+            //checkThePostIsValidate
+            $order["price"]=$products[$id][$oid]['Price']*$order["qty"];
+            $title = $products[$id][$oid]['Title'];
+            $option = $products[$id][$oid]['Option'];
             $qty = $_POST["qty"];
             if (empty($_SESSION["cart"])) {
-                $cart = array(array($title,$option,$price,$qty));
+                $cart = array(array($oid,$title,$option,$order["price"],$qty));
                 $_SESSION["cart"] = $cart;
             } else {
                 $cart = $_SESSION["cart"];
                 $check = false;
-                foreach ($cart as $val) {
-                    if ($val[0] = $title&&$val[1] = $option) {
-                        $check = true;
+                for ($i = 0 ;$i<count($_SESSION["cart"]);$i++) {
+                    if ($cart[$i][0] == $oid) {
+                        $cart[$i][3] += $products[$id][$oid]['Price']*$order["qty"];
+                        $cart[$i][4]+=$qty;
+                        break;
+                    } else {
+                        $ary = array($oid,$title,$option,$order["price"],$qty);
+                        $cart[] = $ary;
+                        break;
                     }
                 }
-                if ($check) {
-                    for ($i=0;$i<count($cart);$i++) {
-                        if ($cart[$i][0] = $title &&$cart[$i][1]=$option&& $cart[$i][2] = $price) {
-                            $cart[$i][3]+=1;
-                        }
-                    }
-                    $_SESSION["$cart"]=$cart;
-                } else {
-                    $ary = array($title,$option,$price,$qty);
-                    $cart[] = $ary;
-                    $_SESSION["cart"] = $cart;
-                }
+                
+                
+                $_SESSION["cart"]=$cart;
             }
-            print_r($cart);
         }
-     $sum = 0;
      foreach ($cart as $c) {
          echo "
          <form action='Checkout.php' method='post'>
          <tr>
-       <td>{$c[0]} {$c[1]}</td>
-        <td>{$c[2]}</td>
-            <td>{$c[3]}</td>
+       <td>{$c[1]} {$c[2]}</td>
+        <td>{$c[3]}</td>
+            <td>{$c[4]}</td>
         </tr>";
-         $sum = $sum + $products[$id]['Price'][$opt];
+         $sum = $sum + $c[3];
      } ?>
     </table>
     <?php echo "<p class='check'>sum: $$sum</p>" ?>
     </div>
     <button type='submit' class='btnCheck'>Check out</button>
-    <a class='btnCheck' href="Cart.php?action=clear">Clear</a>
-    <?php
-            if ($_GET['action']=="clear") {
-                unset($_SESSION["cart"]);
-                header("Location:products.php");
-            } ?>
+    <a class='btnCheck' href="products.php?action=clear">Clear</a>
     </form>
 </main>
 <?php

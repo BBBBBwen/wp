@@ -1,5 +1,12 @@
 <?php
 session_start();
+function preShow( $arr, $returnAsString=false ) {
+  $ret = '<pre>' . print_r($arr, true) . '</pre>';
+  if ($returnAsString)
+  return $ret;
+  else
+  echo $ret;
+  }
 function top_module($pageTitle)
 {
     $html = <<<"OUTPUT"
@@ -185,6 +192,8 @@ function addCart()
         $_SESSION["cart"]["id"] = $_POST["id"];
         $_SESSION["cart"]["option"] = $_POST["option"];
         $_SESSION["cart"]["qty"] = $_POST["qty"];
+    }else{
+      header("Location: products.php");
     }
 }
 function this_id_actually_exists($id){
@@ -213,15 +222,15 @@ function this_id_actually_exists($id){
     if (($headings = fgetcsv($file, 0, "\t")) !== false) {
         while ($cells = fgetcsv($file, 0, "\t")) {
             for ($i = 1;$i<count($cells); $i++) {
-                $products[$cells[0]][$headings[$i]][]=$cells[$i];
+                $products[$cells[0]][$cells[1]][$headings[$i]]=$cells[$i];
             }
         }
     }
     fclose($file);
     flock(LOCK_UN);
-
     if ($_GET['action'] == "logout") {
         session_unset();
         echo 'sucessfully loged out！Click here to <a href="index.php">return</a>';
         exit;
     }
+
