@@ -12,12 +12,13 @@ class ServerWriter extends Server implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
 			TextField textField = server.getTextField();
-			String msg = textField.getText();
-			server.getTextArea().append("me: " + msg + "\n");
-			try {
-				server.getOutputStream().writeUTF(msg);
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}
+			String msg = textField.getText();//get message form server side;
+			server.getTextArea().append("me: " + msg + "\n");//add message to text area;
+				try {
+					server.getOutputStream().writeUTF(msg);//get output stream from server;
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 		}
 	}

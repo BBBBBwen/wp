@@ -1,31 +1,33 @@
-import java.io.*;
-import java.net.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
+import java.net.*;
 
-public class Client {
+public class Server {
 	private TextArea textArea;
 	private TextField textField;
+	private ServerSocket serverSocket;
 	private Socket socket;
 	private OutputStream outputStream;
 	private InputStream inputStream;
 
-	public static void main(String[] args) throws UnknownHostException, IOException {
-		Client client = new Client();
-		client.createUI();
-		client.createClient();
-		client.createThread();
+	public static void main(String[] args) throws IOException {
+		Server server = new Server();
+		server.createUI();
+		server.createServer();
+		server.createThread();
+	}
+
+	public void createServer() throws IOException {
+		serverSocket = new ServerSocket(1234);//creat server socket and port;
+		socket = serverSocket.accept();//start listening to;
+		inputStream = socket.getInputStream();//creat input stream;
+		outputStream = socket.getOutputStream();//creat output stream;
 	}
 
 	public void createThread() {
-		ClientReader reader = new ClientReader(this);
+		ServerReader reader = new ServerReader(this);
 		reader.start();
-	}
-
-	public void createClient() throws UnknownHostException, IOException {
-		socket = new Socket("localhost", 1234);
-		outputStream = socket.getOutputStream();
-		inputStream = socket.getInputStream();
 	}
 
 	public InputStream getInputStream() {
@@ -45,18 +47,18 @@ public class Client {
 		return textField;
 	}
 
-	public void createUI() {
-		Frame frame = new Frame("Client");
+	public void createUI() {// creat user interface;
+		Frame frame = new Frame("Server");//initial frame of gui;
 		textArea = new TextArea();
 		textField = new TextField();
 		Button send = new Button("send");
 		Panel panel = new Panel();
 		panel.setLayout(new BorderLayout());
-		panel.add(textField, "Center");
-		panel.add(send, "East");
+		panel.add(textField, "Center");//assign places;
+		panel.add(send, "East");//assign button;
 		frame.add(textArea, "Center");
 		frame.add(panel, "South");
-		ClientWriter riter = new ClientWriter(this);
+		ServerWriter riter = new ServerWriter(this);
 		send.addActionListener(riter);
 		textField.addActionListener(riter);
 		frame.addWindowListener(new WindowAdapter() {
@@ -68,15 +70,9 @@ public class Client {
 		frame.setVisible(true);
 	}
 
-	public void close() {
-		try {
+	public void close() throws IOException {
 			inputStream.close();
 			outputStream.close();
 			socket.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 }
-
-

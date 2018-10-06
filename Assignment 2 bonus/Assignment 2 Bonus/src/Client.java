@@ -1,33 +1,31 @@
-import java.awt.*;
-import java.awt.event.*;
 import java.io.*;
 import java.net.*;
+import java.awt.*;
+import java.awt.event.*;
 
-public class Server {
+public class Client {
 	private TextArea textArea;
 	private TextField textField;
-	private ServerSocket serverSocket;
 	private Socket socket;
 	private OutputStream outputStream;
 	private InputStream inputStream;
 
-	public static void main(String[] args) throws IOException {
-		Server server = new Server();
-		server.createUI();
-		server.createServer();
-		server.createThread();
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		Client client = new Client();
+		client.createUI();
+		client.createClient();
+		client.createThread();
 	}
 
 	public void createThread() {
-		ServerReader reader = new ServerReader(this);
+		ClientReader reader = new ClientReader(this);
 		reader.start();
 	}
 
-	public void createServer() throws IOException {
-		serverSocket = new ServerSocket(1234);
-		socket = serverSocket.accept();
-		inputStream = socket.getInputStream();
+	public void createClient() throws UnknownHostException, IOException {
+		socket = new Socket("localhost", 1234);
 		outputStream = socket.getOutputStream();
+		inputStream = socket.getInputStream();
 	}
 
 	public InputStream getInputStream() {
@@ -48,7 +46,7 @@ public class Server {
 	}
 
 	public void createUI() {
-		Frame frame = new Frame("Server");
+		Frame frame = new Frame("Client");
 		textArea = new TextArea();
 		textField = new TextField();
 		Button send = new Button("send");
@@ -58,7 +56,7 @@ public class Server {
 		panel.add(send, "East");
 		frame.add(textArea, "Center");
 		frame.add(panel, "South");
-		ServerWriter riter = new ServerWriter(this);
+		ClientWriter riter = new ClientWriter(this);
 		send.addActionListener(riter);
 		textField.addActionListener(riter);
 		frame.addWindowListener(new WindowAdapter() {
@@ -70,13 +68,11 @@ public class Server {
 		frame.setVisible(true);
 	}
 
-	public void close() {
-		try {
+	public void close() throws IOException {
 			inputStream.close();
 			outputStream.close();
 			socket.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 }
+
+
