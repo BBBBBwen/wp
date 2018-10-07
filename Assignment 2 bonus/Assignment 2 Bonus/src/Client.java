@@ -3,12 +3,8 @@ import java.net.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Client {
-	private TextArea textArea;
-	private TextField textField;
+public class Client extends Abstract {
 	private Socket socket;
-	private OutputStream outputStream;
-	private InputStream inputStream;
 
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		Client client = new Client();
@@ -17,9 +13,48 @@ public class Client {
 		client.createThread();
 	}
 
+	@Override
+	public void createUI() {// creat user interface;
+		Frame frame = new Frame("Client");// initialize gui;
+		Panel panel = new Panel();
+		frame.setSize(600, 300);
+		frame.setLocation(600, 0);
+		textArea = new TextArea();
+		textField = new TextField();
+		Button send = new Button("send");
+		panel.setLayout(new BorderLayout());// assign where text,button will be placed;
+		panel.add(textField, "Center");
+		panel.add(send, "East");
+		frame.add(textArea, "Center");
+		frame.add(panel, "South");
+		ClientWriter riter = new ClientWriter(this);
+		send.addActionListener(riter);// set action when send clicked;
+		textField.addActionListener(riter);// textfield act when sent functioned;
+		frame.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+				try {
+					close();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		frame.setVisible(true);
+	}
+
+	@Override
 	public void createThread() {
 		ClientReader reader = new ClientReader(this);
 		reader.start();
+	}
+
+	@Override
+	public void close() throws IOException {
+		inputStream.close();
+		outputStream.close();
+		socket.close();
 	}
 
 	public void createClient() throws UnknownHostException, IOException {
@@ -27,52 +62,4 @@ public class Client {
 		outputStream = socket.getOutputStream();
 		inputStream = socket.getInputStream();
 	}
-
-	public InputStream getInputStream() {
-		return inputStream;
-	}
-
-	public DataOutputStream getOutputStream() {
-		DataOutputStream outputStream = new DataOutputStream(this.outputStream);
-		return outputStream;
-	}
-
-	public TextArea getTextArea() {
-		return textArea;
-	}
-
-	public TextField getTextField() {
-		return textField;
-	}
-
-	public void createUI() {
-		Frame frame = new Frame("Client");
-		textArea = new TextArea();
-		textField = new TextField();
-		Button send = new Button("send");
-		Panel panel = new Panel();
-		panel.setLayout(new BorderLayout());
-		panel.add(textField, "Center");
-		panel.add(send, "East");
-		frame.add(textArea, "Center");
-		frame.add(panel, "South");
-		ClientWriter riter = new ClientWriter(this);
-		send.addActionListener(riter);
-		textField.addActionListener(riter);
-		frame.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-				System.exit(0);
-			}
-		});
-		frame.setSize(400, 400);
-		frame.setVisible(true);
-	}
-
-	public void close() throws IOException {
-			inputStream.close();
-			outputStream.close();
-			socket.close();
-	}
 }
-
-

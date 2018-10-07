@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 class ServerReader extends Thread {
+	// get date from input stream of Client.so it can be processed for Server
 	private Server server;
 
 	public ServerReader(Server server) {
@@ -17,9 +18,9 @@ class ServerReader extends Thread {
 		TextArea textArea = server.getTextArea();
 		try {
 			while (true) {
-				msg = dataInputStream.readUTF();//get message from input stream and format with UTF code
-				Calculator calculator = new Calculator(msg);//detect hamming code err from input stream;
-				textArea.append("other: " + msg + "\n");//add text to text area;
+				msg = dataInputStream.readUTF();// get message from input stream and format with UTF code
+				Calculator calculator = new Calculator(msg);// detect hamming code err from input stream;
+				textArea.append("other: " + msg + "\n");// add text to text area;
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

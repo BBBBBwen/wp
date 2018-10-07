@@ -1,9 +1,5 @@
-import java.util.Scanner;
-
 public class Calculator {
-	private static int p;
 	public Calculator(String string) {
-		System.out.println(string);
 		validate(string);
 	}
 
@@ -18,20 +14,26 @@ public class Calculator {
 		}
 		System.out.println(str);
 	}
+
 	public void validate(String str) {
 		// initialize the array for input code
 		int[] ham = new int[str.length()];
 		int err = -1;
+		int j = ham.length - 1;
+		int[] HMbackward = new int[str.length()];
+		int Backw = str.length() - 1;
 		// find the first R_
+
 		for (int i = 0; i < ham.length; i++) {
-			ham[i] = str.charAt(i) - 48;
+			ham[j] = str.charAt(i) - 48;
 			// get 1 or 0;
+			j--;
 		}
 		for (int i = 0; i < ham.length; i++) {
 			// find out err position;
 			if (parity(i, ham)) {
 				if (EvenParity(i, ham) == 1) {
-					err = err + i + 1;
+					err += i;
 				}
 			}
 		}
@@ -41,12 +43,23 @@ public class Calculator {
 			System.out.print("Received codes are invalid. Found error at " + (err + 1));
 			ham[err] = 1 - ham[err];
 			// Correct error;
-			printArray("\nthe Correct cide are ", ham);
+			for (int h = 0; h < str.length(); h++) {
+				HMbackward[h] = ham[Backw];
+				Backw--;
+			}
+			printArray("\nthe Correct cide are ", HMbackward);
 		}
 	}
 
 	public boolean parity(int i, int[] str) {
 		// Find out parity;
+		int p;
+		for (int j = 0;; j++) {
+			if (Math.pow(2, j) >= str.length) {
+				p = j;
+				break;
+			}
+		}
 		for (int j = 0; j < p; j++) {
 			if (i == Math.pow(2, j) - 1) {
 				return true;

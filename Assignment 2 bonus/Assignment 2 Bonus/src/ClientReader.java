@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 class ClientReader extends Thread {
+	// get date from input stream of Server so it can be processed for Client;
 	private Client client;
 
 	public ClientReader(Client client) {
@@ -17,8 +18,8 @@ class ClientReader extends Thread {
 		TextArea textArea = client.getTextArea();
 		try {
 			while (true) {
-				msg = dataInputStream.readUTF();//get message from input stream and format with UTF code;
-				textArea.append("other side: " + msg + "\n");//add text to text area;
+				msg = dataInputStream.readUTF();// get message from input stream and format with UTF code;
+				textArea.append("other side: " + msg + "\n");// add text to text area;
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
