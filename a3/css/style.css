@@ -64,7 +64,7 @@
 
 .logoImage {
     height: inherit;
-   left: 0;
+    left: 0;
     position: absolute;
 }
 
@@ -290,26 +290,32 @@ h2 {
 .confirm-btn {
     margin-top: 10%;
 }
-.row{
+
+.row {
     text-align: left;
     width: 100%;
 }
-.border{
+
+.border {
     border-bottom: 1px solid #DDD;
 }
 
-.nameCol{
-    width: 60%; 
+.nameCol {
+    width: 60%;
 }
-.priceCol{
+
+.priceCol {
     width: 15%;
 }
-.qtyCol{
-    width:15%;
+
+.qtyCol {
+    width: 15%;
 }
-.check{
+
+.check {
     text-align: right;
 }
+
 .btnCheck {
     float: right;
     text-align: center;
@@ -319,7 +325,30 @@ h2 {
     background-color: indianred;
     border: inherit;
 }
-main{
+
+main {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
+}
+
+.checkTable {
+    width: 100%;
+    text-align: left;
+}
+
+.recTable {
+    border: 2px solid black;
+    background-color: white;
+}
+
+.info {
+    border: 1px solid #dad8de;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+}
+.visa{
+    width: 80px;
+    margin-left: 20px;
+    display: none;
 }

@@ -55,7 +55,7 @@ qty[0].onchange = function () {
         }
     } else if (qty[0].value <= 0 || isNaN(parseInt(qty))) {
         for (i = 0; i < smt.length; i++) {
-            smt[i].style.color = "grey";
+            smt[i].style.color = "red";
             smt[i].disabled = true;
         }
     }
@@ -86,8 +86,19 @@ function check() {
     return true;
 }
 var loged = document.getElementById('logIn');
-function loged(){
+
+function loged() {
     sibtn.style.display = 'none';
     loged.style.display = 'none';
     subtn.style.display = 'none';
+}
+var creditCard = document.getElementById('creditCard').value;
+var visa = document.getElementById("visa");
+var vali = /^4[0-9]{12}(?:[0-9]{3})?$/;
+function OnInput(event){
+    if(vali.test(creditCard.value)){
+        alert ("The new content: " + event.target.value);
+    }else{
+        visa.style.display = "none";
+    }
 }

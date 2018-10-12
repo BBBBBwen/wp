@@ -1,12 +1,15 @@
 <?php
+
 session_start();
-function preShow( $arr, $returnAsString=false ) {
-  $ret = '<pre>' . print_r($arr, true) . '</pre>';
-  if ($returnAsString)
-  return $ret;
-  else
-  echo $ret;
-  }
+function preShow($arr, $returnAsString = false)
+{
+    $ret = '<pre>'.print_r($arr, true).'</pre>';
+    if ($returnAsString) {
+        return $ret;
+    } else {
+        echo $ret;
+    }
+}
 function top_module($pageTitle)
 {
     $html = <<<"OUTPUT"
@@ -17,7 +20,7 @@ function top_module($pageTitle)
         <title>$pageTitle</title>
           <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
         <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
-        <script src='../wireframe.js'></script>;
+        <script src='../wireframe.js'></script>
     </head>
 OUTPUT;
     echo $html;
@@ -25,34 +28,7 @@ OUTPUT;
 
 function top_nav()
 {
-    if (isset($_SESSION["user"]) && !empty($_SESSION["user"])) {
-        $html = <<<"OUTPUT"
-    <body class='backGround'>
-    <header class='titleContainer'>
-<div class='topLeft title'>
-<a class='logo noUnderLine' href="index.php">CaptainRouge</a>
-              </div>
-              <div class='title tap'>
-                <div class='topRight'>The best fish & chips in Dandenong
-                </div>
-              </div>
-            </header>
-            <nav class="shadow topBar">
-              <img class='logoImage' src='../../A2media/CRLogo.jpg' alt='Captain Rouge logo' />
-          
-              <div class='tabLeft'>
-                  <a class='link' href="index.php" target='_top'>Home</a>
-                  <a class='link' href="products.php" target='_top'>Products</a>
-                  <a class='link' href="Cart.php" target='_top'>Cart</a>
-              </div>
-              <div class='tabRight'>
-              <a class='link' href="index.php?action=logout">Log out</a>
-            </div>
-            </nav>
-OUTPUT;
-        echo $html;
-    } else {
-        $html = <<<"OUTPUT"
+    $html = <<<"OUTPUT"
     <body class='backGround'>
     <header class='titleContainer'>
 <div class='topLeft title'>
@@ -82,8 +58,7 @@ OUTPUT;
               </div>
             </nav>
 OUTPUT;
-        echo $html;
-    }
+    echo $html;
 }
 
 function Sign()
@@ -186,51 +161,72 @@ OUTPUT;
 
 function addCart()
 {
-  
-  $arr[] = $_SESSION["cart"];
+    $arr[] = $_SESSION['cart'];
     if (isset($_POST['id'],$_POST['option'],$_POST['qty'])) {
-        $_SESSION["cart"]["id"] = $_POST["id"];
-        $_SESSION["cart"]["option"] = $_POST["option"];
-        $_SESSION["cart"]["qty"] = $_POST["qty"];
-    }else{
-      header("Location: products.php");
+        $_SESSION['cart']['id'] = $_POST['id'];
+        $_SESSION['cart']['option'] = $_POST['option'];
+        $_SESSION['cart']['qty'] = $_POST['qty'];
+    } else {
+        header('Location: products.php');
     }
 }
-function this_id_actually_exists($id){
-  $file = fopen("products.csv", "r");
+function this_id_actually_exists($id)
+{
+    $file = fopen('products.csv', 'r');
     flock($file, LOCK_SH);
     if (($headings = fgetcsv($file, 0, "\t")) !== false) {
         while ($cells = fgetcsv($file, 0, "\t")) {
-            for ($i = 0;$i<count($cells); $i++) {
-                $products[$headings[$i]][]=$cells[$i];
+            for ($i = 0; $i < count($cells); ++$i) {
+                $products[$headings[$i]][] = $cells[$i];
             }
         }
     }
     fclose($file);
     flock(LOCK_UN);
-    for($i=0;$i<count($products[ID]);$i++){
-      if($id == $products[ID][$i]){
-        return true;
-      }else{
-        return false;
-      }
+    for ($i = 0; $i < count($products[ID]); ++$i) {
+        if ($id == $products[ID][$i]) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
   $products;
-    $file = fopen("products.csv", "r");
+    $file = fopen('products.csv', 'r');
     flock($file, LOCK_SH);
     if (($headings = fgetcsv($file, 0, "\t")) !== false) {
         while ($cells = fgetcsv($file, 0, "\t")) {
-            for ($i = 1;$i<count($cells); $i++) {
-                $products[$cells[0]][$cells[1]][$headings[$i]]=$cells[$i];
+            for ($i = 1; $i < count($cells); ++$i) {
+                $products[$cells[0]][$cells[1]][$headings[$i]] = $cells[$i];
             }
         }
     }
     fclose($file);
     flock(LOCK_UN);
-    if ($_GET['action'] == "logout") {
+    if ($_GET['action'] == 'logout') {
         session_unset();
         echo 'sucessfully loged out！Click here to <a href="index.php">return</a>';
         exit;
     }
 
+    function php2js($arr, $arrName)
+    {
+        $lineEnd = '';
+        echo "<script>\n";
+        echo " var $arrName = {\n";
+        foreach ($arr as $key => $value) {
+            echo "$lineEnd $key : $value";
+            $lineEnd = ",\n";
+        }
+        echo " \n};\n";
+        echo "</script>\n\n";
+    }
+      function printMyCode()
+      {
+          $lines = file($_SERVER['SCRIPT_FILENAME']);
+          echo "<pre class='mycode'>\n";
+          foreach ($lines as $lineNo => $lineOfCode) {
+              printf("%3u: %1s \n", $lineNo, rtrim(htmlentities($lineOfCode)));
+          }
+          echo '</pre>';
+      }
