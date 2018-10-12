@@ -4,24 +4,30 @@ session_start();
       top_module('Assaginmnet3');
       top_nav();
       sign();
-      $da = strtotime($_POST['expireDate']);
-      $da1 = strtotime($_POST['expireDate'] + '30 days');
-      preShow($_POST['expireDate']);
-      preShow($da);
-    $userName = '/^[a-zA-Z0-9_-]{4,16}$/';
+      $userName = '/^[a-zA-Z0-9_-]{4,16}$/';
     $mobilePhone = '/^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{1}(\ |-){0,1}[0-9]{3}$/';
     $creditCard = '/^[0-9]{12,19}$/';
-    $address = "/^[A-Za-z0-9_\x{4e00}-\x{9fa5}]+$/";
-    if (preg_match('/^[a-zA-Z0-9_-]{4,16}$/', $_POST['userName'])) {
-        $_SESSION['user'] = $_POST;
-    } else {
-        unset($_SESSION['user']);
-        echo '<script language="javascript">location.href="Checkout.php"</script>';
-    }$receipt['Date'] = date('Y/m/d');
-      $receipt['Name'] = $_SESSION['user']['userName'];
-      $receipt['Address'] = $_SESSION['user']['address'];
-      $receipt['Mobile'] = $_SESSION['user']['mobilePhone'];
-      $receipt['Email'] = $_SESSION['user']['email'];
+    $address = '/^\d+\s[A-z]+\s[A-z]+/';
+    if ($_GET['action'] == 'validate') {
+        if (!preg_match($userName, $_POST['userName'])) {
+            echo "<script>alert('wrong username')</script>";
+            echo '<script language="javascript">location.href="Checkout.php"</script>';
+        } elseif (!preg_match($mobilePhone, $_POST['mobilePhone'])) {
+            echo "<script>alert('wrong moblie phone {$_POST['mobilePhone']}')</script>";
+            echo '<script language="javascript">location.href="Checkout.php"</script>';
+        } elseif (!preg_match($creditCard, $_POST['creditCard'])) {
+            echo "<script>alert('wrong credit card')</script>";
+            echo '<script language="javascript">location.href="Checkout.php"</script>';
+        } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            echo "<script>alert('wrong email')</script>";
+            echo '<script language="javascript">location.href="Checkout.php"</script>';
+        } elseif (!preg_match($address, $_POST['address'])) {
+            echo "<script>alert('wrong address')</script>";
+            echo '<script language="javascript">location.href="Checkout.php"</script>';
+        } else {
+            $_SESSION['user'] = $_POST;
+        }
+    }
 ?>
 <main class='area'>
   <article>
