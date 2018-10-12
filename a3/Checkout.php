@@ -1,7 +1,7 @@
 <?php
 session_start();
   require_once 'tools.php';
-      top_module('Check Out');
+      top_module('CheckOut');
       top_nav();
       sign();
 

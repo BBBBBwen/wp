@@ -1,21 +1,57 @@
 <?php
   require_once 'tools.php';
-    top_module('chips');
+    top_module('Product');
     top_nav();
     sign();
     $id = $_GET['id'];
     foreach ($products[$id] as $key => $value) {
         $Oid[] = $key;
-        $Title = $products[$id][$key]["Title"];
-        $Description = $products[$id][$key]["Description"];
+        $Title = $products[$id][$key]['Title'];
+        $Description = $products[$id][$key]['Description'];
     }
 ?>
- <?php if (isset($_GET['id'])) {
-    ?>
+ <?php 
+ if (isset($_POST['id'],$_POST['option'],$_POST['qty'])) {
+     $id = $_POST['id'];
+     $oid = $_POST['option'];
+     $order = $_POST;
+     //checkThePostIsValidate
+     $order['price'] = $products[$id][$oid]['Price'] * $order['qty'];
+     $title = $products[$id][$oid]['Title'];
+     $option = $products[$id][$oid]['Option'];
+     $qty = $_POST['qty'];
+     if (empty($_SESSION['cart'])) {
+         $cart = array(array($id, $oid, $title, $option, $order['price'], $qty));
+         $_SESSION['cart'] = $cart;
+     } else {
+         $cart = $_SESSION['cart'];
+         $check = false;
+         for ($i = 0; $i < count($_SESSION['cart']); ++$i) {
+             if ($cart[$i][0] == $id && $cart[$i][1] == $oid) {
+                 $check = true;
+             }
+         }
+         if ($check) {
+             for ($i = 0; $i < count($_SESSION['cart']); ++$i) {
+                 if ($cart[$i][0] == $id && $cart[$i][1] == $oid) {
+                     $cart[$i][4] += $products[$id][$oid]['Price'] * $order['qty'];
+                     $cart[$i][5] += $qty;
+                 }
+             }
+             $_SESSION['cart'] = $cart;
+         } else {
+             $ary = array($id, $oid, $title, $option, $order['price'], $qty);
+             $cart[] = $ary;
+             $_SESSION['cart'] = $cart;
+         }
+     }
+     echo '<script language="javascript">location.href="Cart.php"</script>';
+ } elseif (isset($_GET['id'])) {
+     ?>
 <main class='area'>
     <span class="dis-flex inheight">
         <aside class='img-area inheight'>
-            <?php echo "<img src='../../A3media/$id.jpg' alt='$Title' class='sigImg' />" ?>
+            <?php echo "<img src='../../A3media/$id.jpg' alt='$Title' class='sigImg' />"; ?>
         </aside>
         <div class='pro-detail'>
             <div class='topic'>
@@ -28,13 +64,13 @@
             </div>
             <span class='price'>
                 <?php foreach ($Oid as $oid) {
-        printf("{$products[$id][$oid]['Option']} : $%1.2f <br \>", $products[$id][$oid]['Price']);
-    } ?>
+         printf("{$products[$id][$oid]['Option']} : $%1.2f <br \>", $products[$id][$oid]['Price']);
+     } ?>
 
             </span>
-            <?php echo "<form action='cart.php?id=$id' method='post' enctype=''
-                targe=_blank>" ?>
-            <?php echo "<input type='hidden' name='id' value=$id />" ?>
+            <?php echo "<form action='Product.php?id=$id' method='post' enctype=''
+                targe=_blank>"; ?>
+            <?php echo "<input type='hidden' name='id' value=$id />"; ?>
             <div class='shop'>
                 <div class='select'>
                     <select id='select' name='option' required>
@@ -56,7 +92,8 @@
             </div>
             </form>
             <?php
-} else { ?>
+ } else {
+     ?>
     <main class='area'>
     <div class='dis-flex'>
         <aside class='category'>
@@ -90,7 +127,8 @@
         </div>
     </div>
 </main>
-                       <?php }?>
+                       <?php
+ }?>
         </div>
     </span>
 </main>

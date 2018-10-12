@@ -1,11 +1,11 @@
 <?php
-  require_once('tools.php');
-    top_module("products");
+  require_once 'tools.php';
+    top_module('products');
     top_nav();
     sign();
-     if ($_GET['action']=="clear") {
-        unset($_SESSION["cart"]);
-    }
+     if ($_GET['action'] == 'clear') {
+         unset($_SESSION['cart']);
+     }
 ?>
 <main class='area'>
     <div class='dis-flex'>
@@ -23,7 +23,6 @@
                     <img src='../../A3media/s001.jpg' alt='Chips' class='proImg' />
                 </a>
                 <h3>Chips</h3>
-
             </span>
             <span class='pro'>
                 <a href="Product.php?id=b001" target='_top'>

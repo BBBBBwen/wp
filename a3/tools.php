@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 function preShow($arr, $returnAsString = false)
 {
     $ret = '<pre>'.print_r($arr, true).'</pre>';
@@ -47,7 +48,6 @@ function top_nav()
                   <a class='link' id='logIn' href="Cart.php" target='_top'>Cart</a>
               </div>
               <div class='tabRight'>
-              <a class='link' href="tools.php?action=logout">LogOut</a>
                 <button type='button' id='sibtn' class='link'>
                   <a>LogIn</a>
                 </button>
@@ -146,7 +146,7 @@ function end_module()
 <div>&copy;
 <script>
 document.write(new Date().getFullYear());
-</script> Bowen Zhang s3617571, Cheng Chen s3728207 A2-s3617571-s3728207</div>
+</script> Bowen Zhang s3617571, Cheng Chen s3728207 A3-s3617571-s3728207</div>
 <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
 Programming course at RMIT University in Melbourne, Australia.</div>
 <div>Maintain links to your <a href='products.csv'>products spreadsheet</a> and <a href='orders.csv'>orders
@@ -182,8 +182,9 @@ function this_id_actually_exists($id)
     }
     fclose($file);
     flock(LOCK_UN);
-    for ($i = 0; $i < count($products[ID]); ++$i) {
-        if ($id == $products[ID][$i]) {
+    preShow($products[ID]);
+    for ($i = 0; $i < count($products['ID']); ++$i) {
+        if ($id == $products['ID'][$i]) {
             return true;
         } else {
             return false;
@@ -200,13 +201,8 @@ function this_id_actually_exists($id)
             }
         }
     }
-    fclose($file);
     flock($file, LOCK_UN);
-    if ($_GET['action'] == 'logout') {
-        unset($_SESSION);
-        echo 'sucessfully loged out！Click here to <a href="index.php">return</a>';
-        exit;
-    }
+    fclose($file);
 
     function php2js($arr, $arrName)
     {

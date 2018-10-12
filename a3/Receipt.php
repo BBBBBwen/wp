@@ -1,7 +1,7 @@
 <?php
 session_start();
   require_once 'tools.php';
-      top_module('Assaginmnet3');
+      top_module('Receipt');
       top_nav();
       sign();
       $userName = '/^[a-zA-Z0-9_-]{4,16}$/';
@@ -51,12 +51,12 @@ session_start();
                 <th>Subtotal</th>
                 </tr>
                 <?php
-                for ($i = 0; $i < count($_SESSION[cart]); ++$i) {
-                    $receipt['ID'] = $_SESSION[cart][$i][0];
-                    $receipt['OID'] = $_SESSION[cart][$i][1];
-                    $receipt['qty'] = $_SESSION[cart][$i][5];
-                    $receipt['Price'] = $products[$_SESSION[cart][$i][0]][$_SESSION[cart][$i][1]]['Price'];
-                    $receipt['Total'] = $_SESSION[cart][$i][4];
+                for ($i = 0; $i < count($_SESSION['cart']); ++$i) {
+                    $receipt['ID'] = $_SESSION['cart'][$i][0];
+                    $receipt['OID'] = $_SESSION['cart'][$i][1];
+                    $receipt['qty'] = $_SESSION['cart'][$i][5];
+                    $receipt['Price'] = $products[$_SESSION['cart'][$i][0]][$_SESSION['cart'][$i][1]]['Price'];
+                    $receipt['Total'] = $_SESSION['cart'][$i][4];
                     $file = fopen('orders.csv', 'a');
                     flock($file, LOCK_EX);
                     fputcsv($file, $receipt);
@@ -64,10 +64,10 @@ session_start();
                     fclose($file);
                     echo "<tr>
                 <td>{$receipt['ID']}</td>
-                <td>{$_SESSION[cart][$i][1]}</td>
-                <td>{$_SESSION[cart][$i][5]}</td>
-                <td>{$products[$_SESSION[cart][$i][0]][$_SESSION[cart][$i][1]]['Price']}</td>
-                <td>{$_SESSION[cart][$i][4]}</td></tr>";
+                <td>{$receipt['OID']}</td>
+                <td>{$receipt['qty']}</td>
+                <td>{$receipt['Price']}</td>
+                <td>{$receipt['Total']}</td></tr>";
                 }?>
         </table>
   </article>
