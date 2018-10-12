@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 function preShow($arr, $returnAsString = false)
 {
     $ret = '<pre>'.print_r($arr, true).'</pre>';
@@ -202,9 +201,9 @@ function this_id_actually_exists($id)
         }
     }
     fclose($file);
-    flock(LOCK_UN);
+    flock($file, LOCK_UN);
     if ($_GET['action'] == 'logout') {
-        session_unset();
+        unset($_SESSION);
         echo 'sucessfully loged out！Click here to <a href="index.php">return</a>';
         exit;
     }

@@ -4,13 +4,14 @@ session_start();
       top_module('Check Out');
       top_nav();
       sign();
+
 ?>
 <main class='area'>
     <div>
         <div>
             <h1>Payment Details</h1>
         </div>
-        <form action='Checkout.php?action=validate' method='post'>
+        <form action='Receipt.php?action=validate' method='post'>
         <table class='checkTable'>
             <tr>
                 <th>Name</th>
@@ -30,7 +31,7 @@ session_start();
             </tr>
             <tr>
                 <th>Credit Card</th>
-            <td><input type='text' id = 'creditCard' name='creditCard'  oninput="OnInput (event)" class='info' value='' required/><img src='../../A3media/visa.jpg' id='visa' class='visa' /></td>
+            <td><input type='text' id = 'creditCard' name='creditCard'  oninput="OnInput(event)" class='info' value='' required/><img src='../../A3media/visa.jpg' id='visa' class='visa' /></td>
             </tr>
             <tr>
                 <th>Expire Date</th>

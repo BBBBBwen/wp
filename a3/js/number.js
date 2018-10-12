@@ -92,12 +92,12 @@ function loged() {
     loged.style.display = 'none';
     subtn.style.display = 'none';
 }
-var creditCard = document.getElementById('creditCard').value;
+function OnInput(event){
+var creditCard = event.target.value;
 var visa = document.getElementById("visa");
 var vali = /^4[0-9]{12}(?:[0-9]{3})?$/;
-function OnInput(event){
-    if(vali.test(creditCard.value)){
-        alert ("The new content: " + event.target.value);
+    if(/^4[0-9]{12}(?:[0-9]{3})?$/.test(creditCard)){
+        visa.style.display = "block";
     }else{
         visa.style.display = "none";
     }
